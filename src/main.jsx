@@ -8,15 +8,19 @@ import {
 } from "react-router-dom";
 import MainLayout from './Layouts/MainLayout.jsx';
 import Home from './Components/Home/Home.jsx';
+import About from './Section/About/About.jsx';
+import Skills from './Section/Skills/Skills.jsx'
+import Projects from './Section/Projects/Projects.jsx';
+import Contact from './Section/Contact/Contact.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
-    children:[
-    {
-      index:true,
-      element: <Home></Home>
-    }
+    children: [
+      {
+        index: true,
+        element: <Home></Home>
+      }
     ]
   },
 ]);
