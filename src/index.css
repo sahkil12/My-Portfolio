@@ -13,7 +13,24 @@
      --color-base-200: #466FDC;
      --color-base-300: #7C5AE4;
 }
-
 body {
      font-family: "Poppins", sans-serif;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 0.80;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}
+@utility animate-pulseGlow {
+  animation: pulseGlow 3s ease-in-out infinite;
 }

@@ -49,7 +49,7 @@ const Navbar = ({ scrollTop }) => {
                     </button>
                     {/* Mobile Menu Button */}
                     <button
-                         className="lg:hidden rounded-full p-2 bg-base-100 border border-base-300/5  text-white text-2xl"
+                         className="lg:hidden rounded-full p-2.5 bg-base-100 border border-base-300/5 text-white text-2xl hover:border-primary/40"
                          onClick={() => setOpen(true)}
                     >
                          <IoMenu />
@@ -58,14 +58,14 @@ const Navbar = ({ scrollTop }) => {
                {/* MOBILE FULLSCREEN MENU */}
                {open && (
                     <div
-                         className="fixed inset-0 bg-[#0B0E13] bg-opacity-80 backdrop-blur-xl z-50 p-5 flex flex-col">
+                         className="fixed inset-0 bg-[#0B0E13] bg-opacity-80 backdrop-blur-xl z-50 py-5 px-4 flex flex-col">
                          {/* Top Bar */}
                          <div className="flex items-center justify-between mb-6">
-                              <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary to-base-200">
-                                   Mustafa .
+                              <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary/80 to-base-200">
+                                   Mustafa Tazwer.
                               </h1>
                               <button
-                                   className="text-primary p-2 rounded-full bg-base-300/10 text-2xl"
+                                   className="text-primary p-2.5 rounded-full bg-base-300/10 text-2xl"
                                    onClick={() => setOpen(false)}
                               >
                                    <IoClose />
@@ -105,7 +105,7 @@ const Navbar = ({ scrollTop }) => {
                               {/* Bottom Hire Me Button */}
                               <button
                                    onClick={() => setOpen(false)}
-                                   className="mt-6 w-full px-4 py-3 rounded-lg bg-gradient-to-r from-primary to-base-200 text-white text-center font-medium transition-all"
+                                   className="mt-5 w-full px-4 py-3 rounded-lg bg-gradient-to-r from-secondary to-base-200 text-white text-center font-medium transition-all"
                               >
                                    Hire Me
                               </button>

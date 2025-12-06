@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const MainLayout = () => {
      const [scrollTop, setScrollTop] = useState(false);
-
+     
      useEffect(() => {
           const onScroll = () => {
                setScrollTop(window.scrollY > 20);
