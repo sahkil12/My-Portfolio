@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import { IoMenu, IoClose } from "react-icons/io5";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
      const [open, setOpen] = useState(false);
-     const [active, setActive] = useState("home");
+     const [activeMobile, setActiveMobile] = useState("home");
+
      const navItems = [
           { name: "Home", id: "home" },
           { name: "About", id: "about" },
@@ -12,13 +13,6 @@ const Navbar = () => {
           { name: "Projects", id: "projects" },
           { name: "Contact", id: "contact" },
      ];
-     const scrollToSection = (id) => {
-          setActive(id);
-          const section = document.getElementById(id);
-          console.log(section);
-          section.scrollIntoView({ behavior: "smooth" });
-     };
-
      return (
           <>
                {/* MAIN NAVBAR */}
@@ -31,27 +25,24 @@ const Navbar = () => {
                          {navItems.map((item) => (
                               <Link
                                    key={item.name}
-                                   onClick={() => scrollToSection(item.id)}
-                                   to={item.path}
-                                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all
-                                             ${active === item.id
-                                             ? "bg-gradient-to-r from-primary to-base-200 text-white shadow-lg"
-                                             : "text-gray-300 hover:text-white hover:bg-[#1a1e28ae]"
-                                        }
-                                        `}
+                                   to={item.id}
+                                   spy={true}
+                                   smooth={true}
+                                   offset={-100}
+                                   duration={500}
+                                   className="px-4 py-2 text-sm font-medium rounded-full text-gray-300 hover:text-white hover:bg-[#1a1e28ae] cursor-pointer"
+                                   activeClass="bg-gradient-to-r from-primary to-base-200 text-white shadow-lg"
                               >
                                    {item.name}
                               </Link>
                          ))}
                     </div>
-
                     {/* Desktop Hire Me */}
-                    <Link
-                         to="/contact"
-                         className="hidden text-sm lg:flex px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium hover:opacity-90 transition-all"
+                    <button
+                         className="hidden lg:flex px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium hover:opacity-90 transition-all cursor-pointer"
                     >
                          Hire Me
-                    </Link>
+                    </button>
                     {/* Mobile Menu Button */}
                     <button
                          className="lg:hidden rounded-full p-2 bg-base-100 border border-base-300/5  text-white text-2xl"
@@ -75,37 +66,38 @@ const Navbar = () => {
                                    <IoClose />
                               </button>
                          </div>
-
                          {/* Menu Box */}
-                         <div className="h-[410px] bg-[#12151D] rounded-2xl p-6 border border-[#1C2029] space-y-4 overflow-y-auto">
+                         <div className="h-[420px] bg-[#12151D] rounded-2xl p-6 border border-[#1C2029] space-y-4">
                               {navItems.map((item) => (
                                    <Link
-                                        key={item.name}
-                                        to={item.path}
+                                        key={item.id}
+                                        to={item.id}
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-100}
+                                        duration={500}
+                                        onSetActive={() => setActiveMobile(item.id)}
                                         onClick={() => {
                                              setOpen(false)
-                                             scrollToSection(item.id)
+                                             setActiveMobile(item.id)
                                         }}
-                                        className={
-                                             `block px-4 py-3 text-base font-medium rounded-lg hover:bg-base-100 transition-all $ ${active === item.id
+                                        className={`block px-4 py-3 text-base font-medium rounded-lg cursor-pointer
+                                                   ${activeMobile === item.id
                                                   ? "bg-gradient-to-r from-base-300 to-base-200 text-white shadow-lg"
-                                                  : "text-gray-300 hover:text-white"
-                                             }`
-                                        }
+                                                  : "text-gray-300 hover:text-white hover:bg-[#1a1e28ae]"}
+                                                 `}
                                    >
                                         {item.name}
                                    </Link>
                               ))}
                          </div>
-
                          {/* Bottom Hire Me Button */}
-                         <Link
-                              to="/contact"
+                         <button
                               onClick={() => setOpen(false)}
-                              className="mt-6 w-full px-4 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 text-white text-center font-medium transition-all"
+                              className="mt-6 w-full px-4 py-3 rounded-lg bg-gradient-to-r from-primary to-base-200 text-white text-center font-medium transition-all"
                          >
                               Hire Me
-                         </Link>
+                         </button>
                     </div>
                )}
           </>
