@@ -38,7 +38,7 @@ const Hero = () => {
                          </motion.h1>
                          <motion.p
                               initial={{ y: 40, opacity: 0 }}
-                              animate={{ y: 0, opacity: 1 }}
+                              animate={{ y: 0, opacity: 1.1 }}
                               transition={{ duration: 1.2 }}
                               className="text-gray-400 text-sm md:text-lg/relaxed mt-6 max-w-xl">
                               Building modern, user-friendly web applications with the <b>MERN Stack</b> while growing my skills and delivering clean, thoughtful digital experiences
@@ -88,7 +88,7 @@ const Hero = () => {
                               transition={{ duration: 2, ease: "easeInOut", repeat: Infinity }}
                               className="relative transition-all duration-600">
                               {/*animation border style */}
-                              <div className="absolute inset-0 rounded-full animate-rotateArc before:content-[''] before:absolute before:inset-0 before:rounded-full before:border-[6px] before:border-transparent before:border-t-primary/70 before:border-r-primary/20 before:border-l-base-200/20 before:border-b-base-200/70"></div>
+                              <div className="absolute inset-0 rounded-full animate-rotateArc before:content-[''] before:absolute before:inset-0 before:rounded-full before:border-[6px] before:border-transparent before:border-t-primary/85 before:border-r-primary/20 before:border-l-base-200/20 before:border-b-base-200/85"></div>
                                    {/* image */}
                               <div className="relative rounded-full m-3">
                                    <img
@@ -110,8 +110,8 @@ const Hero = () => {
                                         }}
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.8, delay: 0.3 }}
-                                        className="absolute -bottom-3 -right-18 lg:-right-20 -translate-x-1/2 bg-base-100 border border-primary/30 hover:border-primary/50 px-3 py-3.5 lg:px-6 rounded-2xl flex items-center gap-3.5 shadow-lg"
+                                        transition={{ duration: 0.5, delay: 0.2 }}
+                                        className="absolute -bottom-3 -right-18 lg:-right-20 -translate-x-1/2 bg-gray-900 border-2 border-primary/30 hover:border-primary/50 px-3 py-3.5 lg:px-6 rounded-2xl flex items-center gap-3.5 shadow-lg"
                                    >
                                         <motion.span
                                              animate={{ rotate: 360 }}
@@ -126,6 +126,7 @@ const Hero = () => {
                          </motion.div>
                     </motion.div>
                </div>
+               
           </section>
 
      );
