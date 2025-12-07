@@ -13,6 +13,10 @@
      --color-base-200: #466FDC;
      --color-base-300: #7C5AE4;
 }
+html{
+  scroll-behavior: smooth;
+}
+
 body {
      font-family: "Poppins", sans-serif;
 }
