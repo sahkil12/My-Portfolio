@@ -16,12 +16,12 @@ const Navbar = ({ scrollTop }) => {
      ];
      return (
           <div className={`w-full transition-all duration-400 ${scrollTop
-               ? "bg-[#0B0E13]/40 border-b backdrop-blur-xl border-white/5"
+               ? "bg-[#0B0E13]/30 border-b backdrop-blur-xl border-white/5"
                : "bg-transparent"
                }`}>
                {/* NAVBAR */}
                <div className={`md:w-[84%] mx-auto py-5 px-4 flex items-center justify-between`}>
-                    <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary/80 to-base-200">
+                    <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary/75 to-base-200">
                          Mustafa Tazwer.
                     </h1>
                     {/* Desktop Menu */}
@@ -34,8 +34,10 @@ const Navbar = ({ scrollTop }) => {
                                    smooth={true}
                                    offset={-100}
                                    duration={500}
-                                   className="px-4 py-2 text-sm font-medium rounded-full text-gray-400 hover:text-white hover:bg-[#1a1e28ae] cursor-pointer"
-                                   activeClass="bg-gradient-to-r from-primary to-base-200 text-white shadow-lg"
+                                   onSetActive={() => setActiveMobile(item.id)}
+                                   className={`px-4 py-2 text-sm font-medium rounded-full cursor-pointer ${activeMobile === item.id ? "bg-gradient-to-r from-primary to-base-200 text-white shadow-lg"
+                                        : "text-gray-400 hover:text-white hover:bg-[#1a1e28ae]"
+                                        }`}
                               >
                                    {item.name}
                               </Link>
@@ -61,7 +63,7 @@ const Navbar = ({ scrollTop }) => {
                          className="fixed inset-0 bg-[#0B0E13] bg-opacity-80 backdrop-blur-xl z-50 py-5 px-4 flex flex-col">
                          {/* Top Bar */}
                          <div className="flex items-center justify-between mb-6">
-                              <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary/80 to-base-200">
+                              <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary/75 to-base-200">
                                    Mustafa Tazwer.
                               </h1>
                               <button
