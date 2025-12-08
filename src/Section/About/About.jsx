@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const About = () => {
      return (
-          <div className="py-16 px-5 md:px-16 text-gray-300">
+          <div className="py-14 px-5 md:px-16 text-gray-300">
                {/* section title */}
                <div className="text-center mb-16">
                     <motion.h2
@@ -19,7 +19,7 @@ const About = () => {
                          initial={{ width: 0 }}
                          whileInView={{ width: 90 }}
                          transition={{ duration: 0.6, delay: 0.2 }}
-                         className="h-1 mx-auto mt-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"
+                         className="h-1.5 mx-auto mt-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"
                     ></motion.div>
                </div>
                {/* main content gris layout */}
@@ -39,7 +39,7 @@ const About = () => {
                               <div className="absolute -inset-5 rounded-full bg-gradient-to-r from-purple-600/20 to-primary/20 blur-2xl animate-[pulse_3s_ease-in-out_infinite]"></div>
                               {/* image */}
                               <img
-                                   src="/public/about.jpg"
+                                   src="/about1.jpg"
                                    alt="about photo"
                                    className="w-64 h-64 md:w-[330px] md:h-[330px] object-cover rounded-full opacity-80 shadow-xl m-2.5 transition-all duration-500"
                               />

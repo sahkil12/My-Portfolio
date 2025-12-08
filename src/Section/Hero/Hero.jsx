@@ -92,7 +92,7 @@ const Hero = () => {
                                    {/* image */}
                               <div className="relative rounded-full m-3">
                                    <img
-                                        src="/public/hero-pic.jpg"
+                                        src="/hero-pic.jpg"
                                         alt="profile photo"
                                         className="rounded-full opacity-85 w-64 h-64 md:w-[300px] md:h-[300px] xl:w-[400px] xl:h-[400px] object-cover"
                                    />
