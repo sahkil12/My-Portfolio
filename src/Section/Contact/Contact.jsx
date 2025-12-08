@@ -117,7 +117,7 @@ const Contact = () => {
                          initial={{ opacity: 0, x: 40 }}
                          whileInView={{ opacity: 1, x: 0 }}
                          transition={{ duration: 0.7 }}
-                         className="bg-base-100 p-6 md:p-8 rounded-2xl shadow-xl/50 shadow-primary/10 space-y-6"
+                         className="bg-base-100 p-6 md:p-8 rounded-2xl shadow-xl/40 shadow-primary/10 space-y-6"
                     >
                          <div>
                               <label className="text-sm font-semibold">Your Name</label>
@@ -166,39 +166,6 @@ const Contact = () => {
                               Send Message
                          </motion.button>
                     </motion.form>
-               </div>
-               {/* social media link */}
-               <div className="text-center mt-28 flex items-center justify-center gap-6">
-                    <motion.a
-                         href="https://github.com/sahkil12"
-                         target="_blank"
-                         rel="noopener noreferrer"
-                         className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg"
-                         whileHover={{ scale: 1.2, backgroundColor: "#8851D0", color: "#0D2440" }}
-                         whileTap={{ scale: 0.9 }}
-                    >
-                         <FaGithub className="text-xl" />
-                    </motion.a>
-                    <motion.a
-                         href="https://www.linkedin.com/in/md-mustafa32/"
-                         target="_blank"
-                         rel="noopener noreferrer"
-                         className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg"
-                         whileHover={{ scale: 1.2, backgroundColor: "#8851D0", color: "#0D2440" }}
-                         whileTap={{ scale: 0.9 }}
-                    >
-                         <FaLinkedin className="text-xl" />
-                    </motion.a>
-                    <motion.a
-                         href="https://x.com/MustafaTaz11432"
-                         target="_blank"
-                         rel="noopener noreferrer"
-                         className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg"
-                         whileHover={{ scale: 1.2, backgroundColor: "#8851D0", color: "#0D2440" }}
-                         whileTap={{ scale: 0.9 }}
-                    >
-                         <FaTwitter className="text-xl" />
-                    </motion.a>
                </div>
           </div>
      );

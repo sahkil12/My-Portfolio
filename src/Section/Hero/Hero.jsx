@@ -43,6 +43,7 @@ const Hero = () => {
                               className="text-gray-400 text-sm md:text-lg/relaxed mt-6 max-w-xl">
                               Building modern, user-friendly web applications with the <b>MERN Stack</b> while growing my skills and delivering clean, thoughtful digital experiences
                          </motion.p>
+                         
                          {/* Buttons */}
                          <div className="mt-9 flex flex-wrap gap-4">
                               {/* project button */}

@@ -1,7 +1,14 @@
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
-
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 const About = () => {
+
+     const socials = [
+          { icon: <FaLinkedin className="text-xl" />, link: "https://www.linkedin.com/in/md-mustafa32/" },
+          { icon: <FaGithub className="text-xl" />, link: "https://github.com/sahkil12" },
+          { icon: <FaTwitter className="text-xl" />, link: "https://x.com/MustafaTaz11432" },
+     ];
+
      return (
           <div className="py-14 px-5 md:px-16 text-gray-300">
                {/* section title */}
@@ -53,6 +60,21 @@ const About = () => {
                                    MERN Stack Developer
                               </p>
                               <p className="max-w-md text-sm/relaxed text-gray-400">I build modern, scalable, and user-focused web applications with the MERN stack, turning ideas into fast, reliable, and meaningful digital experiences that truly deliver.</p>
+                              {/* social button */}
+                              <div className="text-center mt-8 flex items-center justify-center gap-8">
+                                   {socials?.map((social) => (
+                                        <motion.a
+                                             href={social.link}
+                                             target="_blank"
+                                             rel="noopener noreferrer"
+                                             className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center shadow-lg shadow-lg/40 shadow-primary/50"
+                                             whileHover={{ scale: 1.2, backgroundColor: "#8851D0", color: "#fff" }}
+                                             whileTap={{ scale: 0.9 }}
+                                        >
+                                             {social.icon}
+                                        </motion.a>
+                                   ))}
+                              </div>
                               <motion.button
                                    whileHover={{
                                         y: -6,

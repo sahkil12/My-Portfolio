@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../Components/Shared/Navbar/Navbar";
 import { useEffect, useState } from "react";
+import Footer from "../Components/Shared/Footer/Footer";
 
 const MainLayout = () => {
      const [scrollTop, setScrollTop] = useState(false);
@@ -24,6 +25,7 @@ const MainLayout = () => {
                <main className="mx-auto md:w-[85%]">
                     <Outlet></Outlet>
                </main>
+               <Footer></Footer>
           </div>
      );
 };
