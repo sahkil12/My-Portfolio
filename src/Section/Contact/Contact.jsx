@@ -1,10 +1,36 @@
 import { motion } from "framer-motion";
+import { useRef } from "react";
 import { FaArrowRight, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneFlip } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import emailjs from "emailjs-com";
+import toast from "react-hot-toast";
 
 const Contact = () => {
+
+     const formRef = useRef();
+     const sendEmail = (e) => {
+          e.preventDefault();
+
+          emailjs
+               .sendForm(
+                    "service_az99kyt",
+                    "template_3ju77ka",
+                    formRef.current,
+                    "2INs45P1FpExUVDxp"
+               )
+               .then(
+                    () => {
+                         toast.success("Message sent successfully!");
+                         formRef.current.reset();
+                    },
+                    (error) => {
+                         toast.error("Failed to send message!");
+                    }
+               );
+     };
+
      return (
           <div className="py-24 px-5 lg:px-24 text-gray-300 ">
                {/* Title */}
@@ -40,7 +66,7 @@ const Contact = () => {
                               initial={{ opacity: 0, x: -30 }}
                               whileInView={{ opacity: 1, x: 0 }}
                               transition={{ duration: 0.6 }}
-                              className="text-5xl/snug md:text-6xl/snug font-semibold max-w-xl"
+                              className="text-4xl/snug md:text-6xl/snug font-semibold max-w-xl"
                          >
                               Let’s <span className="text-secondary">Connect</span> and Build Something Amazing
                          </motion.h3>
@@ -114,47 +140,65 @@ const Contact = () => {
                     </div>
                     {/* Right Side (Form) */}
                     <motion.form
+                         ref={formRef}
+                         onSubmit={sendEmail}
                          initial={{ opacity: 0, x: 40 }}
                          whileInView={{ opacity: 1, x: 0 }}
                          transition={{ duration: 0.7 }}
                          className="bg-base-100 p-6 md:p-8 rounded-2xl shadow-xl/40 shadow-primary/10 space-y-6"
                     >
                          <div>
+                              {/* name */}
                               <label className="text-sm font-semibold">Your Name</label>
                               <input
                                    type="text"
                                    placeholder="Your Name"
+                                   name="user_name"
                                    required
                                    className="w-full mt-2 p-3 bg-transparent border border-white/20 rounded-lg focus:border-primary/30 outline-none"
                               />
                          </div>
+                         {/* email */}
                          <div>
                               <label className="text-sm font-semibold">Your Email</label>
                               <input
                                    type="email"
+                                   name="user_email"
                                    required
                                    placeholder="Your Email"
                                    className="w-full mt-2 p-3 bg-transparent border border-white/20 rounded-lg focus:border-primary/30 outline-none"
                               />
                          </div>
+                         {/* number */}
                          <div>
                               <label className="text-sm font-semibold">Phone Number</label>
                               <input
                                    type="number"
                                    required
+                                   name="user_phone"
                                    placeholder="Your Phone number"
                                    className="w-full mt-2 p-3 bg-transparent border border-white/20 rounded-lg focus:border-primary/30 outline-none"
                               />
                          </div>
+                         {/* message */}
                          <div>
                               <label className="text-sm font-semibold">Message</label>
                               <textarea
                                    rows="5"
+                                   name="message"
                                    placeholder="Write Your Message.."
                                    className="w-full mt-2 p-3 bg-transparent border border-white/20 rounded-lg focus:border-primary/30 outline-none"
                               ></textarea>
                          </div>
+                         {/* Existing fields */}
+                         <input
+                              type="hidden"
+                              name="time"
+                              value={new Date().toLocaleString()}
+                         />
+                         {/* send button */}
                          <motion.button
+                              type="submit"
                               whileHover={{
                                    y: -1,
                                    scale: 1.03,

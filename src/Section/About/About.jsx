@@ -84,7 +84,7 @@ const About = () => {
                                         backgroundColor: "rgb(129,150,248)"
                                    }}
                                    transition={{ duration: .1 }}
-                                   className="flex items-center gap-1 px-8 py-3 mt-8 border-primary/30 shadow-lg shadow-primary/30 hover:shadow-xl mx-auto transition-all duration-300 font-semibold border rounded-full bg-gradient-to-r from-purple-600 to-base-200/90 border-none">
+                                   className="flex items-center gap-1 px-8 py-3 mt-10 border-primary/30 shadow-lg shadow-primary/30 hover:shadow-xl mx-auto transition-all duration-300 font-semibold border rounded-full bg-gradient-to-r from-purple-600 to-base-200/90 border-none">
                                    My Resume <motion.span
                                         animate={{ x: [0, 4, 0] }}
                                         transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}

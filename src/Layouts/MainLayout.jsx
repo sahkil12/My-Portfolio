@@ -18,7 +18,7 @@ const MainLayout = () => {
      return (
           <div className="min-h-screen">
                <header className={`sticky z-50 transition-all duration-400 
-               ${scrollTop ? "-top-1.5" : "top-0"
+               ${scrollTop ? "-top-0.5 md:-top-1.5" : "top-0"
                     }`}>
                     <Navbar scrollTop={scrollTop}></Navbar>
                </header>

@@ -39,7 +39,7 @@ const projects = [
 
 const Projects = () => {
      return (
-          <div className="py-14 px-5 lg:px-16 2xl:px-40 text-gray-300">
+          <div className="py-6 md:py-14 px-5 lg:px-16 2xl:px-40 text-gray-300">
                {/* Title */}
                <div className="text-center mb-16">
                     <motion.h2
@@ -80,9 +80,9 @@ const Projects = () => {
                                    <img
                                         src={project.image}
                                         alt={project.title}
-                                        className="w-full h-full object-cover opacity-90"
+                                        className="w-full h-full object-cover opacity-95"
                                    />
-                                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-black/20"></div>
+                                   <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-black/10"></div>
                                    {/* Title overlay on image */}
                                    <motion.div
                                         initial={{ opacity: 0, y: 25 }}

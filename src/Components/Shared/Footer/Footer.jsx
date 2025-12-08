@@ -43,7 +43,7 @@ const Footer = () => {
                          whileInView={{ opacity: 1, y: 0 }}
                          transition={{ delay: 0.3, duration: 0.7 }}
                          viewport={{ once: true }}
-                         className="flex justify-center items-center gap-8 mb-4"
+                         className="flex justify-center items-center gap-8 mb-4 flex-wrap"
                     >
                          {links.map(link => (
                               <a
