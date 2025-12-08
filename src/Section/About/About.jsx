@@ -62,14 +62,15 @@ const About = () => {
                               <p className="max-w-md text-sm/relaxed text-gray-400">I build modern, scalable, and user-focused web applications with the MERN stack, turning ideas into fast, reliable, and meaningful digital experiences that truly deliver.</p>
                               {/* social button */}
                               <div className="text-center mt-8 flex items-center justify-center gap-8">
-                                   {socials?.map((social) => (
+                                   {socials?.map((social, idx) => (
                                         <motion.a
+                                             key={idx}
                                              href={social.link}
                                              target="_blank"
                                              rel="noopener noreferrer"
-                                             className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center shadow-lg shadow-lg/40 shadow-primary/50"
-                                             whileHover={{ scale: 1.2, backgroundColor: "#8851D0", color: "#fff" }}
-                                             whileTap={{ scale: 0.9 }}
+                                             className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center shadow-lg shadow-lg/40 shadow-primary/50 hover:bg-gradient-to-r from-primary/90 to-base-200"
+                                             whileHover={{ scale: 1.2,  color: "#fff" }}
+                                             whileTap={{ scale: 0.7 }}
                                         >
                                              {social.icon}
                                         </motion.a>

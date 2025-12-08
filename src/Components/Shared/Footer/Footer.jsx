@@ -1,4 +1,5 @@
-import { FaGithub, FaLinkedin, FaFacebook, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFacebook, FaTwitter } from "react-icons/fa";
+import { motion } from 'framer-motion';
 
 const Footer = () => {
      const socials = [
@@ -8,43 +9,103 @@ const Footer = () => {
           { icon: <FaTwitter />, label: "Twitter", link: "https://x.com/MustafaTaz11432" },
      ];
 
-     return (
-          <footer className="w-full bg-base-300 text-gray-200 py-16 px-5">
-               <div className="max-w-5xl mx-auto flex flex-col items-center gap-8">
-                    {/* Name */}
-                    <h2 className="text-2xl font-semibold tracking-wide">
-                         Mustafa Tazwer 
-                    </h2>
+     const links = [
+          { id: "home", name: "Home" },
+          { id: "about", name: "About" },
+          { id: "skills", name: "Skills" },
+          { id: "projects", name: "Projects" },
+          { id: "contact", name: "Contact" },
+     ];
 
-                    {/* Social Icons */}
-                    <div className="flex items-center gap-6 text-xl">
-                         {socials.map((s, index) => (
+     return (
+          <motion.footer
+               initial={{ opacity: 0, y: 100 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.9, ease: "easeOut" }}
+               viewport={{ once: true }}
+               className="w-full bg-base-300/75 text-gray-200 py-14 px-5 mt-14"
+          >
+               <div className="max-w-7xl mx-auto flex flex-col items-center gap-8">
+                    {/* Name */}
+                    <motion.h2
+                         initial={{ opacity: 0, y: 40 }}
+                         whileInView={{ opacity: 1, y: 0 }}
+                         transition={{ delay: 0.2, duration: 0.7 }}
+                         whileHover={{ textShadow: "0px 0px 12px rgb(150,120,245)" }}
+                         viewport={{ once: true }}
+                         className="text-2xl w-fit font-semibold tracking-wide"
+                    >
+                         Mustafa Tazwer
+                    </motion.h2>
+                    {/* section link */}
+                    <motion.div
+                         initial={{ opacity: 0, y: 40 }}
+                         whileInView={{ opacity: 1, y: 0 }}
+                         transition={{ delay: 0.3, duration: 0.7 }}
+                         viewport={{ once: true }}
+                         className="flex justify-center items-center gap-8 mb-4"
+                    >
+                         {links.map(link => (
                               <a
+                                   key={link.id}
+                                   href={`#${link.id}`}
+                                   className="font-medium hover:translate-y-[-2px] hover:text-gray-900 transition-all duration-300"
+                              >
+                                   {link.name}
+                              </a>
+                         ))}
+                    </motion.div>
+                    {/* Social Icons */}
+                    <motion.div
+                         initial="hidden"
+                         whileInView="visible"
+                         viewport={{ once: true }}
+                         variants={{
+                              hidden: { opacity: 0, y: 40 },
+                              visible: {
+                                   opacity: 1,
+                                   y: 0,
+                                   transition: {
+                                        delay: 0.4,
+                                        duration: 0.7,
+                                        staggerChildren: 0.09,
+                                   },
+                              },
+                         }}
+                         className="flex items-center gap-6 text-xl"
+                    >
+                         {socials.map((s, index) => (
+                              <motion.a
                                    key={index}
+                                   variants={{ hidden: { opacity: 0, y: 20 }, 
+                                   visible: { opacity: 1, y: 0 } }}
+                                   whileHover={{ scale: 1.1, rotate: 4 }}
                                    href={s.link}
                                    target="_blank"
                                    rel="noopener noreferrer"
-                                   className="relative group p-3 rounded-full bg-[#1a1a1a] hover:-translate-y-2 transition-all duration-300"
+                                   className="relative group p-3 rounded-full bg-[#1a1a1a] hover:-translate-y-1.5 transition-all duration-300 hover:bg-gradient-to-r from-primary/90 to-base-200"
                               >
                                    {s.icon}
-
-                                   {/* Tooltip */}
-                                   <span className="absolute bottom-12 left-1/2 -translate-x-1/2 
-                               bg-black text-sm px-2 py-1 rounded 
-                               opacity-0 scale-0 group-hover:opacity-100 
-                               group-hover:scale-100 transition-all duration-300">
+                                   <span
+                                        className="absolute bottom-14 left-1/2 -translate-x-1/2  bg-gradient-to-r from-primary/90 to-base-200 text-sm px-2 py-1 rounded opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300"
+                                   >
                                         {s.label}
                                    </span>
-                              </a>
+                              </motion.a>
                          ))}
-                    </div>
-
+                    </motion.div>
                     {/* Bottom text */}
-                    <p className="text-base text-white mt-4">
-                         © 2025 MT Shakil. All rights reserved.
-                    </p>
+                    <motion.p
+                         initial={{ opacity: 0 }}
+                         whileInView={{ opacity: 1 }}
+                         transition={{ delay: 0.6, duration: 1 }}
+                         viewport={{ once: true }}
+                         className="text-base text-white mt-3 pt-8 border-t border-gray-400 w-full text-center opacity-70 hover:opacity-100 transition-all duration-300"
+                    >
+                         © 2025 Mustafa Tazwer. All rights reserved.
+                    </motion.p>
                </div>
-          </footer>
+          </motion.footer>
      );
 };
 

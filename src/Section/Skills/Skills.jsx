@@ -20,7 +20,7 @@ const skills = [
 
 const Skills = () => {
      return (
-          <div className="py-6 md:py-14 px-5 md:px-20 text-gray-300">
+          <div className="py-6 md:py-14 px-5 md:px-16 xl:px-32 text-gray-300">
                {/* Title */}
                <div className="text-center mb-16">
                     <motion.h2
