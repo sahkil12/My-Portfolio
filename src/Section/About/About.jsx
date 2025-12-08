@@ -23,7 +23,7 @@ const About = () => {
                     ></motion.div>
                </div>
                {/* main content gris layout */}
-               <div className="grid grid-cols-1 xl:grid-cols-2 gap-16 items-center">
+               <div className="grid grid-cols-1 xl:grid-cols-2 gap-16 items-center ">
                     {/*left side- image section */}
                     <motion.div
                          initial={{ opacity: 0, y: 50 }}

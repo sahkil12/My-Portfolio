@@ -16,10 +16,10 @@ const Navbar = ({ scrollTop }) => {
      ];
      return (
           <div className={`w-full transition-all duration-400 ${scrollTop
-               ? "bg-[#0B0E13]/30 border-b backdrop-blur-xl border-white/5"
+               ? "bg-[#0B0E13]/50 border-b backdrop-blur-xl border-white/5"
                : "bg-transparent"
                }`}>
-               {/* NAVBAR */}
+               {/* navbar */}
                <div className={`md:w-[84%] mx-auto py-5 px-4 flex items-center justify-between`}>
                     <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary/75 to-base-200">
                          Mustafa Tazwer.
