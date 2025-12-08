@@ -36,7 +36,7 @@ body {
   }
 }
 @utility animate-pulseGlow {
-  animation: pulseGlow 3s ease-in-out infinite;
+  animation: pulseGlow 4s ease-in-out infinite;
 }
 
 @keyframes rotateArc {

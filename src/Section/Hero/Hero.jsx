@@ -26,7 +26,7 @@ const Hero = () => {
                               <motion.p
                                    animate={{ scale: [1, 1.4, 1], opacity: [1, .6, 1] }}
                                    transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
-                                   className="bg-primary/50 w-2.5 h-2.5 rounded-full"></motion.p> MERN Stack Developer
+                                   className="bg-primary/70 w-2.5 h-2.5 rounded-full"></motion.p> MERN Stack Developer
                          </motion.span>
 
                          <motion.h1
