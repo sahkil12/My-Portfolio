@@ -20,7 +20,7 @@ const Navbar = ({ scrollTop }) => {
                : "bg-transparent"
                }`}>
                {/* navbar */}
-               <div className={`md:w-[84%] mx-auto py-5 px-4 flex items-center justify-between`}>
+               <div className={`md:w-[84%] mx-auto py-5 px-4 xl:px-16 flex items-center justify-between`}>
                     <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary/75 to-base-200">
                          Mustafa Tazwer.
                     </h1>

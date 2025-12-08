@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
      return (
-          <section className="relative min-h-[820px] my-5 flex items-center justify-around px-3 md:px-16 overflow-hidden">
+          <section className="relative min-h-[820px] my-5 flex items-center justify-around px-3 md:px-16 xl:px-20 overflow-hidden">
                {/* background animation color */}
                <div className="
                 absolute inset-0 

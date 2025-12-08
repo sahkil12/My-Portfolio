@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FaArrowRight, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneFlip } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
@@ -52,11 +53,13 @@ const Contact = () => {
                               Whether you have a question, want to start a project or just want to say hi, I’ll respond as soon as possible.
                          </motion.p>
                          {/* Contact Details */}
-                         <div className="space-y-8">
+                         <motion.div
+                              initial={{ opacity: 0, x: -30 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              transition={{ duration: 0.6, delay: 0.2 }}
+                              className="space-y-8">
                               {/* address */}
                               <motion.div
-                                   initial={{ opacity: 0, x: -20 }}
-                                   whileInView={{ opacity: 1, x: 0 }}
                                    transition={{ duration: 0.5, delay: 0.3 }}
                                    whileHover={{ x: 10 }}
                                    className="flex items-start gap-4 w-fit"
@@ -69,8 +72,6 @@ const Contact = () => {
                               </motion.div>
                               {/* phone number */}
                               <motion.div
-                                   initial={{ opacity: 0, x: -20 }}
-                                   whileInView={{ opacity: 1, x: 0 }}
                                    transition={{ duration: 0.5, delay: 0.3 }}
                                    whileHover={{ x: 10 }}
                                    className="flex items-start gap-4 w-fit"
@@ -83,8 +84,6 @@ const Contact = () => {
                               </motion.div>
                               {/* email */}
                               <motion.div
-                                   initial={{ opacity: 0, x: -20 }}
-                                   whileInView={{ opacity: 1, x: 0 }}
                                    transition={{ duration: 0.5, delay: 0.4 }}
                                    whileHover={{ x: 10 }}
                                    className="flex items-start gap-4 w-fit"
@@ -95,7 +94,23 @@ const Contact = () => {
                                         <p className="mt-1 text-gray-500 font-medium">tazwershakilshakil@gmail.com</p>
                                    </span>
                               </motion.div>
-                         </div>
+                              {/* resume button */}
+                              <motion.button
+                                   whileHover={{
+                                        y: -6,
+                                        scale: 1.01,
+                                        boxShadow: "0 10px 40px rgba(84, 90, 155, 0.35)",
+                                        backgroundColor: "rgb(129,150,248)"
+                                   }}
+                                   transition={{ duration: .1 }}
+                                   className="flex items-center gap-1 px-10 py-3 mt-9 border-primary/30 shadow-lg shadow-primary/30 hover:shadow-xl transition-all duration-300 font-semibold border rounded-full bg-gradient-to-r from-purple-600 to-base-200/90 border-none">
+                                   My Resume <motion.span
+                                        animate={{ x: [0, 4, 0] }}
+                                        transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
+                                   ><FaArrowRight />
+                                   </motion.span>
+                              </motion.button>
+                         </motion.div>
                     </div>
                     {/* Right Side (Form) */}
                     <motion.form
@@ -109,15 +124,25 @@ const Contact = () => {
                               <input
                                    type="text"
                                    placeholder="Your Name"
+                                   required
                                    className="w-full mt-2 p-3 bg-transparent border border-white/20 rounded-lg focus:border-primary/30 outline-none"
                               />
                          </div>
-
                          <div>
                               <label className="text-sm font-semibold">Your Email</label>
                               <input
                                    type="email"
+                                   required
                                    placeholder="Your Email"
+                                   className="w-full mt-2 p-3 bg-transparent border border-white/20 rounded-lg focus:border-primary/30 outline-none"
+                              />
+                         </div>
+                         <div>
+                              <label className="text-sm font-semibold">Phone Number</label>
+                              <input
+                                   type="number"
+                                   required
+                                   placeholder="Your Phone number"
                                    className="w-full mt-2 p-3 bg-transparent border border-white/20 rounded-lg focus:border-primary/30 outline-none"
                               />
                          </div>
@@ -129,20 +154,51 @@ const Contact = () => {
                                    className="w-full mt-2 p-3 bg-transparent border border-white/20 rounded-lg focus:border-primary/30 outline-none"
                               ></textarea>
                          </div>
-
                          <motion.button
-                              whileHover={{ scale: 1.01 }}
-                              whileTap={{ scale: 0.97 }}
-                              className="w-fit px-14 rounded-full py-3.5 bg-primary/90 font-medium shadow-lg hover:bg-primary"
-                         >
+                              whileHover={{
+                                   y: -1,
+                                   scale: 1.03,
+                                   boxShadow: "0 10px 20px rgba(84, 90, 155, 0.35)",
+                                   backgroundColor: "rgb(129,150,248)"
+                              }}
+                              transition={{ duration: .2 }}
+                              className="px-10 py-3 mt-5 shadow-lg shadow-primary/20 hover:shadow-xl mx-auto transition-all duration-300 font-semibold rounded-full bg-gradient-to-r from-purple-600 to-base-200/90 border-none">
                               Send Message
                          </motion.button>
                     </motion.form>
                </div>
-
-               <div className="text-center mt-28 flex items-center justify-center gap-10">
-
-                    
+               {/* social media link */}
+               <div className="text-center mt-28 flex items-center justify-center gap-6">
+                    <motion.a
+                         href="https://github.com/sahkil12"
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg"
+                         whileHover={{ scale: 1.2, backgroundColor: "#8851D0", color: "#0D2440" }}
+                         whileTap={{ scale: 0.9 }}
+                    >
+                         <FaGithub className="text-xl" />
+                    </motion.a>
+                    <motion.a
+                         href="https://www.linkedin.com/in/md-mustafa32/"
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg"
+                         whileHover={{ scale: 1.2, backgroundColor: "#8851D0", color: "#0D2440" }}
+                         whileTap={{ scale: 0.9 }}
+                    >
+                         <FaLinkedin className="text-xl" />
+                    </motion.a>
+                    <motion.a
+                         href="https://x.com/MustafaTaz11432"
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg"
+                         whileHover={{ scale: 1.2, backgroundColor: "#8851D0", color: "#0D2440" }}
+                         whileTap={{ scale: 0.9 }}
+                    >
+                         <FaTwitter className="text-xl" />
+                    </motion.a>
                </div>
           </div>
      );

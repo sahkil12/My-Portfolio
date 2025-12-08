@@ -82,7 +82,7 @@ const About = () => {
                               <h3 className="text-2xl md:text-4xl font-semibold text-white mb-5">
                                    I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500 ">Mustafa Tazwer</span>
                               </h3>
-                              <p className="text-gray-400 text-sm md:text-base font-medium leading-7 mb-4">
+                              <p className="text-gray-400 text-sm md:text-base font-medium leading-7 mb-3">
                                    I work as a <strong>MERN Stack Developer</strong> and I enjoy building modern,
                                    user-friendly and smooth web applications. I love turning ideas
                                    into clean and functional digital experiences. I'm always learning,
@@ -96,12 +96,12 @@ const About = () => {
                          </motion.section>
                          {/* my details info  */}
                          <motion.section
+                              initial={{ opacity: 0, x: 35 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              transition={{ duration: 0.9 }}
                               className="mt-6 ml-3 flex text-start flex-col">
                               {/* experience */}
                               <motion.div
-                                   initial={{ opacity: 0, x: 30 }}
-                                   whileInView={{ opacity: 1, x: 0 }}
-                                   transition={{ duration: 0.8 }}
                                    className="">
                                    <h2 className="text-xl italic text-white font-semibold mb-3">EXPERIENCE</h2>
                                    <p className="text-gray-300 font-semibold text-base mb-1.5">
@@ -111,9 +111,6 @@ const About = () => {
                               </motion.div>
                               {/* technical skills */}
                               <motion.div
-                                   initial={{ opacity: 0, x: 30 }}
-                                   whileInView={{ opacity: 1, x: 0 }}
-                                   transition={{ duration: .80 }}
                                    className="mt-5">
                                    <h2 className="text-xl italic text-white font-semibold mb-3">
                                         TECHNICAL SKILLS
@@ -127,9 +124,6 @@ const About = () => {
                               </motion.div>
                               {/* education details */}
                               <motion.div
-                                   initial={{ opacity: 0, y: 35 }}
-                                   whileInView={{ opacity: 1, y: 0 }}
-                                   transition={{ duration: 0.80 }}
                                    className="mt-5">
                                    <h2 className="text-xl italic text-white font-semibold mb-3">EDUCATION</h2>
                                    <p className="text-gray-300 font-semibold">
