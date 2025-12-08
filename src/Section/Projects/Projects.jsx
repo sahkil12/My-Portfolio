@@ -80,7 +80,7 @@ const Projects = () => {
                                    <img
                                         src={project.image}
                                         alt={project.title}
-                                        className="w-full h-full object-cover opacity-85"
+                                        className="w-full h-full object-cover opacity-90"
                                    />
                                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-black/20"></div>
                                    {/* Title overlay on image */}
@@ -95,7 +95,6 @@ const Projects = () => {
                               </div>
                               {/*  */}
                               <div className="p-6">
-                                   {/* <h3 className="text-xl font-bold mb-2">{project.title}</h3> */}
                                    <p className="text-gray-400 text-sm mb-6 mt-3">{project.description}</p>
                                    <div className="flex flex-wrap gap-2 mb-3">
                                         {project.tech.map((tech, i) => (
