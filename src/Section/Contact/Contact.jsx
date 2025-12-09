@@ -76,7 +76,7 @@ const Contact = () => {
                               transition={{ duration: 0.6, delay: 0.2 }}
                               className="text-gray-400 mt-3 mb-6 max-w-xl leading-relaxed"
                          >
-                             I’d love to connect. Whether you want to discuss a project or just say hello — feel free to reach out.
+                              I’d love to connect. Whether you want to discuss a project or just say hello — feel free to reach out.
                          </motion.p>
                          {/* Contact Details */}
                          <motion.div
@@ -121,7 +121,7 @@ const Contact = () => {
                                    </span>
                               </motion.div>
                               {/* resume button */}
-                              <motion.button
+                              <motion.a
                                    whileHover={{
                                         y: -6,
                                         scale: 1.01,
@@ -129,14 +129,16 @@ const Contact = () => {
                                         backgroundColor: "rgb(129,150,248)"
                                    }}
                                    transition={{ duration: .1 }}
-                                   onClick={()=> window.open('/MUSTAFA TAZWER SHAKIL.pdf', '_blank') }
-                                   className="flex items-center gap-1 px-10 py-3 mt-9 border-primary/30 shadow-lg shadow-primary/30 hover:shadow-xl transition-all duration-300 font-semibold border rounded-full bg-gradient-to-r from-purple-600 to-base-200/90 border-none">
+                                   href="/MUSTAFA TAZWER SHAKIL.pdf"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   className="flex w-fit items-center gap-1 px-10 py-3 mt-9 border-primary/30 shadow-lg shadow-primary/30 hover:shadow-xl transition-all duration-300 font-semibold border rounded-full bg-gradient-to-r from-purple-600 to-base-200/90 border-none">
                                    My Resume <motion.span
                                         animate={{ x: [0, 4, 0] }}
                                         transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
                                    ><FaArrowRight />
                                    </motion.span>
-                              </motion.button>
+                              </motion.a>
                          </motion.div>
                     </div>
                     {/* Right Side (Form) */}

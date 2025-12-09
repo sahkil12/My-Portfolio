@@ -45,7 +45,7 @@ const Navbar = ({ scrollTop }) => {
                     </div>
                     {/* Desktop Hire Me */}
                     <button
-                         className="hidden lg:flex px-7 py-2.5 rounded-full bg-gradient-to-r from-primary to-base-200 text-white text-base font-medium hover:opacity-90 transition-all cursor-pointer"
+                         className="hidden lg:flex hover:-translate-y-1 px-7 py-2.5 rounded-full bg-gradient-to-r from-primary to-base-200 text-white text-base font-medium hover:opacity-90 transition-all cursor-pointer duration-200"
                     >
                          Hire Me
                     </button>
