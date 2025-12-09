@@ -95,7 +95,7 @@ const Hero = () => {
                                    <img
                                         src="/hero-pic.jpg"
                                         alt="profile photo"
-                                        className="rounded-full opacity-85 w-64 h-64 md:w-[300px] md:h-[300px] xl:w-[400px] xl:h-[400px] object-cover"
+                                        className="rounded-full opacity-85 w-56 h-56 md:w-[300px] md:h-[300px] xl:w-[400px] xl:h-[400px] object-cover"
                                    />
                               </div>
                               {/* status badges */}
@@ -112,12 +112,12 @@ const Hero = () => {
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5, delay: 0.2 }}
-                                        className="absolute -bottom-3 -right-18 lg:-right-20 -translate-x-1/2 bg-gray-900 border-2 border-primary/30 hover:border-primary/50 px-3 py-3.5 lg:px-6 rounded-2xl flex items-center gap-3.5 shadow-lg"
+                                        className="absolute -bottom-3 -right-18 lg:-right-20 -translate-x-1/2 bg-gray-900 border-2 border-primary/30 hover:border-primary/50 px-3.5 py-3.5 lg:px-6 rounded-2xl flex items-center gap-3.5 shadow-lg"
                                    >
                                         <motion.span
                                              animate={{ rotate: 360 }}
                                              transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
-                                             className="bg-primary/40 p-1.5 lg:p-3 rounded-full text-lg md:text-xl">🚀</motion.span>
+                                             className="bg-primary/40 p-1.5 lg:p-3 rounded-full text-base md:text-xl">🚀</motion.span>
                                         <span>
                                              <p className="text-sm lg:text-base font-semibold text-gray-400 mb-1">Status</p>
                                              <p className="text-xs lg:text-sm font-semibold text-gray-300">Ready to Work</p>

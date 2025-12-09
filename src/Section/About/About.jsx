@@ -48,7 +48,7 @@ const About = () => {
                               <img
                                    src="/about1.jpg"
                                    alt="about photo"
-                                   className="w-64 h-64 md:w-[330px] md:h-[330px] object-cover rounded-full opacity-80 shadow-xl m-2.5 transition-all duration-500"
+                                   className="w-56 h-56 md:w-[330px] md:h-[330px] object-cover rounded-full opacity-80 shadow-xl m-2.5 transition-all duration-500"
                               />
                               {/* glow border */}
                               <div className="absolute inset-0 rounded-full border-4 border-base-300/50 animate-pulse blur-[2px]"></div>

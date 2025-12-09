@@ -45,5 +45,5 @@ body {
 }
 
 @utility animate-rotateArc {
-  animation: rotateArc 5s linear infinite;
+  animation: rotateArc 7s linear infinite;
 }

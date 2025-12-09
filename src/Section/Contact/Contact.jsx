@@ -92,8 +92,8 @@ const Contact = () => {
                               >
                                    <span className="p-3.5 rounded-full bg-primary/20 hover:scale-110 transition-all duration-30"><FaLocationDot size={22} className="text-primary" /></span>
                                    <span className="flex flex-col">
-                                        <p className="text-gray-200 text-lg font-semibold">Address</p>
-                                        <p className="mt-1 text-gray-500 font-medium">Patiya, Chittagong, Bangladesh</p>
+                                        <p className="text-gray-200 text-base md:text-lg font-semibold">Address</p>
+                                        <p className="mt-1 text-gray-500 text-sm md:text-base font-medium">Patiya, Chittagong, Bangladesh</p>
                                    </span>
                               </motion.div>
                               {/* phone number */}
@@ -104,8 +104,8 @@ const Contact = () => {
                               >
                                    <span className="p-3.5 rounded-full bg-primary/20 hover:scale-110 transition-all duration-30"><FaPhoneFlip size={22} className="text-primary" /></span>
                                    <span className="flex flex-col">
-                                        <p className="text-gray-200 text-lg font-semibold">Phone Number</p>
-                                        <p className="mt-1 text-gray-500 font-medium">+880 1310-079634</p>
+                                        <p className="text-gray-200 text-base md:text-lg font-semibold">Phone Number</p>
+                                        <p className="mt-1 text-gray-500 text-sm md:text-base font-medium">+880 1310-079634</p>
                                    </span>
                               </motion.div>
                               {/* email */}
@@ -116,8 +116,8 @@ const Contact = () => {
                               >
                                    <span className="p-3.5 rounded-full bg-primary/20 hover:scale-110 transition-all duration-300"><MdEmail size={24} className="text-primary" /></span>
                                    <span className="flex flex-col">
-                                        <p className="text-gray-200 text-lg font-semibold">Email</p>
-                                        <p className="mt-1 text-gray-500 font-medium">tazwershakilshakil@gmail.com</p>
+                                        <p className="text-gray-200 text-base md:text-lg font-semibold">Email</p>
+                                        <p className="mt-1 text-gray-500 text-sm md:text-base font-medium">tazwershakilshakil@gmail.com</p>
                                    </span>
                               </motion.div>
                               {/* resume button */}

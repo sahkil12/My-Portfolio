@@ -16,14 +16,13 @@ const Footer = () => {
           { id: "projects", name: "Projects" },
           { id: "contact", name: "Contact" },
      ];
-
      return (
           <motion.footer
                initial={{ opacity: 0, y: 100 }}
                whileInView={{ opacity: 1, y: 0 }}
                transition={{ duration: 0.9, ease: "easeOut" }}
                viewport={{ once: true }}
-               className="w-full bg-base-300/75 text-gray-200 py-14 px-5 mt-14"
+               className="w-full bg-base-300/70 text-gray-200 py-14 px-5 mt-14"
           >
                <div className="max-w-7xl mx-auto flex flex-col items-center gap-8">
                     {/* Name */}
@@ -43,7 +42,7 @@ const Footer = () => {
                          whileInView={{ opacity: 1, y: 0 }}
                          transition={{ delay: 0.3, duration: 0.7 }}
                          viewport={{ once: true }}
-                         className="flex justify-center items-center gap-8 mb-4 flex-wrap"
+                         className="flex justify-center text-sm md:text-base items-center gap-6 md:gap-8 mb-4 flex-wrap"
                     >
                          {links.map(link => (
                               <a

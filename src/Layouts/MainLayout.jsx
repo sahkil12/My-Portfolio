@@ -22,7 +22,7 @@ const MainLayout = () => {
                     }`}>
                     <Navbar scrollTop={scrollTop}></Navbar>
                </header>
-               <main className="mx-auto md:w-[85%]">
+               <main className="mx-auto md:w-[85%] overflow-x-hidden">
                     <Outlet></Outlet>
                </main>
                <Footer></Footer>
