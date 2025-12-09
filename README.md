@@ -5,9 +5,6 @@ A modern, responsive portfolio website built with **React**, showcasing my skill
 [Live Portfolio](https://mustafa-tazwer.vercel.app/)
 
 
-## 📸 Portfolio Screenshot
-![Portfolio Screenshot](./public/portfolio.png)
-
 ## ✨ Features
 🎨 **Modern UI/UX** – Clean, professional design with smooth animations  
 📱 **Fully Responsive** – Works seamlessly on all devices  
@@ -39,8 +36,17 @@ A modern, responsive portfolio website built with **React**, showcasing my skill
 ### Installation
 ```bash
 git clone https://github.com/sahkil12/My-Portfolio.git
+```
+
+```bash
 cd My-Portfolio
+```
+
+```bash
 npm install
+```
+
+```bash
 npm run dev
 ```
 Open your browser and visit http://localhost:5173
@@ -63,12 +69,16 @@ Live link:-[(https://mustafa-tazwer.vercel.app/)]
 ### 👤 Author
 Mustafa Tazwer
 
-**GitHub**: [(https://github.com/sahkil12)]
-**LinkedIn**: [(https://www.linkedin.com/in/md-mustafa32/)]
-**Twitter**: [(https://x.com/MustafaTaz11432)]
-**Email**: tazwershakilshakil@gmail.com
+-**GitHub**: [(https://github.com/sahkil12)]
 
-###
+-**LinkedIn**: [(https://www.linkedin.com/in/md-mustafa32/)]
+
+-**Twitter**: [(https://x.com/MustafaTaz11432)]
+
+-**Email**: tazwershakilshakil@gmail.com
+
+## 📸 Portfolio Screenshot
+![Portfolio Screenshot](./public/portfolio.png)
 
 **⭐ If you like this project, please give it a star!**
 
