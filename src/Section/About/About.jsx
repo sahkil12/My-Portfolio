@@ -29,7 +29,6 @@ const About = () => {
                     >
                          Building clean and modern web experiences
                     </motion.p>
-
                     {/* Gradient animation underline */}
                     <motion.div
                          initial={{ width: 0 }}
@@ -93,6 +92,7 @@ const About = () => {
                                         backgroundColor: "rgb(129,150,248)"
                                    }}
                                    transition={{ duration: .1 }}
+                                   onClick={()=> window.open('/MUSTAFA TAZWER SHAKIL.pdf', '_blank') }
                                    className="flex items-center gap-1 px-8 py-3 mt-10 border-primary/30 shadow-lg shadow-primary/30 hover:shadow-xl mx-auto transition-all duration-300 font-semibold border rounded-full bg-gradient-to-r from-purple-600 to-base-200 border-none">
                                    My Resume <motion.span
                                         animate={{ x: [0, 4, 0] }}

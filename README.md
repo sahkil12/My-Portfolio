@@ -78,12 +78,27 @@ Mustafa Tazwer
 -**Email**: tazwershakilshakil@gmail.com
 
 ## 📸 Portfolio Screenshot
+-----
+
+**Home**
 ![Home](./public/home.png)
+
+**About**
 ![About](./public/about.png)
+
+**Skills**
 ![Skills](./public/skills.png)
+
+**Projects**
 ![Projects](./public/projects.png)
+
+**Contact**
 ![Contact](./public/contact.png)
+
+**Footer**
 ![Footer](./public/footer.png)
+
+-----
 
 ![Portfolio Screenshot](./public/portfolio.png)
 
