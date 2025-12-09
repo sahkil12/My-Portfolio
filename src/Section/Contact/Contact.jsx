@@ -76,7 +76,7 @@ const Contact = () => {
                               transition={{ duration: 0.6, delay: 0.2 }}
                               className="text-gray-400 mt-3 mb-6 max-w-xl leading-relaxed"
                          >
-                              Whether you have a question, want to start a project or just want to say hi, I’ll respond as soon as possible.
+                             I’d love to connect. Whether you want to discuss a project or just say hello — feel free to reach out.
                          </motion.p>
                          {/* Contact Details */}
                          <motion.div

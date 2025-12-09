@@ -99,7 +99,7 @@ const Footer = () => {
                          whileInView={{ opacity: 1 }}
                          transition={{ delay: 0.6, duration: 1 }}
                          viewport={{ once: true }}
-                         className="text-base text-white mt-3 pt-8 border-t border-gray-400 w-full text-center opacity-70 hover:opacity-100 transition-all duration-300"
+                         className="text-sm md:text-base text-white mt-3 pt-8 border-t border-gray-400 w-full text-center opacity-70 hover:opacity-100 transition-all duration-300"
                     >
                          © 2025 Mustafa Tazwer. All rights reserved.
                     </motion.p>

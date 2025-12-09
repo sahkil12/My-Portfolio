@@ -22,7 +22,7 @@ const Hero = () => {
                               initial={{ x: -40 }}
                               animate={{ x: 0 }}
                               transition={{ duration: .8 }}
-                              className="px-4 py-3 rounded-full bg-primary/10 text-primary/90 border border-primary/50 text-xs md:text-sm font-medium flex items-center w-fit gap-3 mb-7">
+                              className="px-4 py-3 rounded-full bg-primary/10 text-primary/95 border border-primary/50 text-xs md:text-sm font-medium flex items-center w-fit gap-3 mb-7">
                               <motion.p
                                    animate={{ scale: [1, 1.4, 1], opacity: [1, .6, 1] }}
                                    transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
@@ -57,7 +57,7 @@ const Hero = () => {
                                    }}
                                    whileTap={{ scale: 0.95 }}
                                    transition={{ type: 'spring', stiffness: 350, damping: 20, duration: 1.4 }}
-                                   href="#projects" className="px-7 py-2.5 bg-gradient-to-r from-secondary to-base-200 rounded-full cursor-pointer hover:opacity-90 font-semibold text-gray-300 border-none">
+                                   href="#projects" className="px-7 py-2.5 bg-gradient-to-r from-secondary to-base-200 rounded-full cursor-pointer hover:opacity-90 font-semibold text-gray-100 border-none">
                                    My Projects
                               </motion.a>
                               {/* get in touch button */}
@@ -71,7 +71,7 @@ const Hero = () => {
                                    }}
                                    whileTap={{ scale: 0.95 }}
                                    transition={{ type: 'spring', stiffness: 350, damping: 35, duration: 1.4 }}
-                                   href="#contact" className="px-7 py-2.5 bg-base-100 hover:border-primary/90 border border-primary/60 cursor-pointer rounded-full font-semibold text-gray-300">
+                                   href="#contact" className="px-7 py-2.5 bg-base-100 hover:border-primary/90 border border-primary/60 cursor-pointer rounded-full font-semibold text-gray-100">
                                    Get In Touch
                               </motion.a>
                          </div>
@@ -117,7 +117,7 @@ const Hero = () => {
                                         <motion.span
                                              animate={{ rotate: 360 }}
                                              transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
-                                             className="bg-primary/40 p-1.5 lg:p-3 rounded-full text-base md:text-xl">🚀</motion.span>
+                                             className="bg-primary/40 p-2 lg:p-3 rounded-full text-base md:text-xl">🚀</motion.span>
                                         <span>
                                              <p className="text-sm lg:text-base font-semibold text-gray-400 mb-1">Status</p>
                                              <p className="text-xs lg:text-sm font-semibold text-gray-300">Ready to Work</p>

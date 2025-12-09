@@ -21,6 +21,15 @@ const About = () => {
                     >
                          About Me
                     </motion.h2>
+                    <motion.p
+                         initial={{ opacity: 0, y: -10 }}
+                         whileInView={{ opacity: 1, y: 0 }}
+                         transition={{ duration: 0.7, delay: 0.3 }}
+                         className="text-center mt-3.5 text-gray-400 text-base"
+                    >
+                         Building clean and modern web experiences
+                    </motion.p>
+
                     {/* Gradient animation underline */}
                     <motion.div
                          initial={{ width: 0 }}
@@ -59,7 +68,7 @@ const About = () => {
                               <p className="text-gray-300 font-medium text-sm lg:text-base mb-2">
                                    MERN Stack Developer
                               </p>
-                              <p className="max-w-md text-sm/relaxed text-gray-400">I build modern, scalable, and user-focused web applications with the MERN stack, turning ideas into fast, reliable, and meaningful digital experiences that truly deliver.</p>
+                              <p className="max-w-md text-sm/relaxed text-gray-400"> I build modern and user-focused web applications with the MERN stack. I like clean code, smooth interfaces, and creating things that feel simple and useful.</p>
                               {/* social button */}
                               <div className="text-center mt-8 flex items-center justify-center gap-8">
                                    {socials?.map((social, idx) => (
@@ -68,8 +77,8 @@ const About = () => {
                                              href={social.link}
                                              target="_blank"
                                              rel="noopener noreferrer"
-                                             className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center shadow-lg shadow-lg/40 shadow-primary/50 hover:bg-gradient-to-r from-primary/90 to-base-200"
-                                             whileHover={{ scale: 1.2,  color: "#fff" }}
+                                             className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center shadow-lg/30 shadow-primary/40 hover:bg-gradient-to-r from-purple-500/90 to-indigo-500"
+                                             whileHover={{ scale: 1.2, color: "#fff" }}
                                              whileTap={{ scale: 0.7 }}
                                         >
                                              {social.icon}
@@ -84,7 +93,7 @@ const About = () => {
                                         backgroundColor: "rgb(129,150,248)"
                                    }}
                                    transition={{ duration: .1 }}
-                                   className="flex items-center gap-1 px-8 py-3 mt-10 border-primary/30 shadow-lg shadow-primary/30 hover:shadow-xl mx-auto transition-all duration-300 font-semibold border rounded-full bg-gradient-to-r from-purple-600 to-base-200/90 border-none">
+                                   className="flex items-center gap-1 px-8 py-3 mt-10 border-primary/30 shadow-lg shadow-primary/30 hover:shadow-xl mx-auto transition-all duration-300 font-semibold border rounded-full bg-gradient-to-r from-purple-600 to-base-200 border-none">
                                    My Resume <motion.span
                                         animate={{ x: [0, 4, 0] }}
                                         transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
@@ -106,15 +115,13 @@ const About = () => {
                                    I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500 ">Mustafa Tazwer</span>
                               </h3>
                               <p className="text-gray-400 text-sm md:text-base font-medium leading-7 mb-3">
-                                   I work as a <strong>MERN Stack Developer</strong> and I enjoy building modern,
-                                   user-friendly and smooth web applications. I love turning ideas
-                                   into clean and functional digital experiences. I'm always learning,
-                                   improving, and exploring new tools that help me write better code.
+                                   I work as a <b> MERN Stack Developer</b> and I enjoy building clean, modern, and
+                                   smooth web applications. I like turning ideas into simple, functional
+                                   experiences. I keep learning new tools and improving my work every day.
                               </p>
                               <p className="text-gray-400 text-sm md:text-base font-medium leading-7 mb-8">
-                                   My journey started with simple HTML pages and slowly moved
-                                   into JavaScript, React, Node and MongoDB. Every project helps me
-                                   grow and pushes me to become a better developer every day.
+                                   My journey started with basic HTML pages and slowly moved into JavaScript,
+                                   React, Node, and MongoDB. Each project helps me grow and become better.
                               </p>
                          </motion.section>
                          {/* my details info  */}
@@ -130,7 +137,8 @@ const About = () => {
                                    <p className="text-gray-300 font-semibold text-base mb-1.5">
                                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">MERN Stack</span> Developer
                                    </p>
-                                   <p className="text-gray-400 text-sm ">@FRESHER | 2025.4 - PRESENT</p>
+                                   <p className="text-gray-400 text-sm"><b>Fresher</b> | 2025 - Present</p>
+
                               </motion.div>
                               {/* technical skills */}
                               <motion.div
@@ -139,7 +147,7 @@ const About = () => {
                                         TECHNICAL SKILLS
                                    </h2>
                                    <ul className="space-y-1 text-sm text-gray-400 list-disc ml-5">
-                                        <li><strong>Frontend:</strong> JavaScript, React, Tailwind CSS</li>
+                                        <li><strong>Frontend:</strong>  HTML, CSS, JavaScript, React, Tailwind</li>
                                         <li><strong>Backend:</strong> Node.js, Express.js</li>
                                         <li><strong>Database:</strong> MongoDB</li>
                                         <li><strong>Tools:</strong> Git, GitHub, Vercel, Netlify, Surge, Firebase</li>

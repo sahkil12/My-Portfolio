@@ -60,7 +60,7 @@ const Navbar = ({ scrollTop }) => {
                {/* MOBILE FULLSCREEN MENU */}
                {open && (
                     <div
-                         className="fixed inset-0 bg-[#0B0E13] bg-opacity-80 backdrop-blur-xl z-50 py-5 px-2 md:px-4 flex flex-col">
+                         className="fixed inset-0 bg-[#0B0E13] bg-opacity-80 backdrop-blur-xl z-50 py-5 px-4 md:px-4 flex flex-col">
                          {/* Top Bar */}
                          <div className="flex items-center justify-between mb-6">
                               <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary/75 to-base-200">
@@ -107,7 +107,7 @@ const Navbar = ({ scrollTop }) => {
                               {/* Bottom Hire Me Button */}
                               <button
                                    onClick={() => setOpen(false)}
-                                   className="mt-5 w-full px-4 py-3 rounded-lg bg-gradient-to-r from-secondary to-base-200 text-white text-center font-medium transition-all"
+                                   className="mt-4 w-full px-4 py-3 rounded-lg bg-gradient-to-r from-secondary to-base-200 text-white text-center font-medium transition-all"
                               >
                                    Hire Me
                               </button>

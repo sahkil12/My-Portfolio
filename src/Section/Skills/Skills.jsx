@@ -1,19 +1,19 @@
 import { motion } from "framer-motion";
 import { FaReact, FaNode, FaHtml5, FaGithub, FaCss3Alt } from "react-icons/fa";
-import { SiJavascript, SiMongodb, SiExpress, SiTailwindcss, SiRedux, SiAxios, SiReactrouter } from "react-icons/si";
+import { SiJavascript, SiMongodb, SiExpress, SiTailwindcss, SiRedux, SiAxios } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
 const skills = [
+     { name: "HTML5", icon: <FaHtml5 size={30} color="#E44D26" />, level: 95, color: "#E44D26" },
+     { name: "CSS3", icon: <FaCss3Alt size={30} color="#1572B6" />, level: 90, color: "#1572B6" },
+     { name: "Tailwind CSS", icon: <SiTailwindcss size={30} color="#38BDF8" />, level: 95, color: "#38BDF8" },
+     { name: "JavaScript", icon: <SiJavascript size={30} color="#F7DF1E" />, level: 90, color: "#F7DF1E" },
      { name: "React.js", icon: <FaReact size={30} color="#61DAFB" />, level: 85, color: "#61DAFB" },
      { name: "Node.js", icon: <FaNode size={30} color="#3C873A" />, level: 80, color: "#3C873A" },
-     { name: "JavaScript", icon: <SiJavascript size={30} color="#F7DF1E" />, level: 90, color: "#F7DF1E" },
-     { name: "HTML5", icon: <FaHtml5 size={30} color="#E44D26" />, level: 95, color: "#E44D26" },
-     { name: "Tailwind CSS", icon: <SiTailwindcss size={30} color="#38BDF8" />, level: 95, color: "#38BDF8" },
-     { name: "CSS3", icon: <FaCss3Alt size={30} color="#1572B6" />, level: 90, color: "#1572B6" },
-     { name: "MongoDB", icon: <SiMongodb size={30} color="#4DB33D" />, level: 80, color: "#4DB33D" },
      { name: "Express.js", icon: <SiExpress size={30} color="#aaaaaa" />, level: 75, color: "#aaaaaa" },
-     { name: "Redux", icon: <SiRedux size={30} color="#764ABC" />, level: 70, color: "#764ABC" },
+     { name: "MongoDB", icon: <SiMongodb size={30} color="#4DB33D" />, level: 80, color: "#4DB33D" },
      { name: "Axios / Fetch", icon: <SiAxios size={30} color="#5A29E4" />, level: 80, color: "#5A29E4" },
+     { name: "Redux", icon: <SiRedux size={30} color="#764ABC" />, level: 70, color: "#764ABC" },
      { name: "Git & GitHub", icon: <FaGithub size={30} color="#F1502F" />, level: 85, color: "#F1502F" },
      { name: "VS Code", icon: <VscVscode size={30} color="#007ACC" />, level: 90, color: "#007ACC" }
 ];
@@ -74,9 +74,9 @@ const Skills = () => {
                               {/* progress bar  */}
                               <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
                                    <motion.div
-                                        initial={{ width: 0 }}
+                                        initial={{ width: 20 }}
                                         whileInView={{ width: `${skill.level}%` }}
-                                        transition={{ duration: 1, ease: "easeOut" }}
+                                        transition={{ duration: 1.3, ease: "easeOut" }}
                                         style={{
                                              background: skill.color,
                                              boxShadow: `0 0 10px ${skill.color}`,

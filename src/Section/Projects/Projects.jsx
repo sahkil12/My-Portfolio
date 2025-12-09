@@ -5,6 +5,7 @@ import { PiGithubLogoBold } from "react-icons/pi";
 const projects = [
      {
           title: "ProShift",
+          category: "Full Stack",
           description: "A parcel delivery platform with tracking, online payments, rider tools, and admin management for users and parcels.",
           tech: ["React", "Node.js", "MongoDB", "Firebase", "Tailwind CSS", "Express", "DaisyUI", "Axios", "Stripe", "TanStack Query"],
           image: "/proshift.png",
@@ -13,6 +14,7 @@ const projects = [
      },
      {
           title: "TaskHive",
+          category: "Full Stack",
           description: "A platform connecting people needing help with small online tasks to those who can complete them, like a mini freelance marketplace.",
           tech: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Express", "Axios", "DaisyUI", "Firebase"],
           image: "/taskhive.png",
@@ -21,6 +23,7 @@ const projects = [
      },
      {
           title: "Coffee Store",
+          category: "Full Stack",
           description: "An online coffee store with product browsing, cart management, and secure checkout.",
           tech: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Axios", "DaisyUI"],
           image: "/coffee-shop.png",
@@ -29,6 +32,7 @@ const projects = [
      },
      {
           title: "CareerLink",
+          category: "Full Stack",
           description: "A freelancing marketplace where freelancers can find jobs, clients can post projects, and manage bids with real-time updates.",
           tech: ["React", "Firebase", "MongoDB", "React Router", "Tailwind CSS", "DaisyUI", "Axios", "TanStack Query"],
           image: "/careerlink.png",
@@ -56,7 +60,7 @@ const Projects = () => {
                          transition={{ duration: 0.7, delay: 0.3 }}
                          className="text-center mt-3.5 text-gray-400 text-base"
                     >
-                        Some of the work I’ve built with care and clean code
+                         Some of the work I’ve built with care and clean code
                     </motion.p>
                     <motion.div
                          initial={{ width: 0 }}
@@ -66,7 +70,7 @@ const Projects = () => {
                     ></motion.div>
                </div>
                {/* Projects Grid */}
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:10">
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
                     {projects.map((project, idx) => (
                          <motion.div
                               key={idx}
@@ -74,27 +78,31 @@ const Projects = () => {
                               whileInView={{ opacity: 1, y: 0 }}
                               transition={{ duration: 0.6 }}
                               whileHover={{ y: -15 }}
-                              className="rounded-2xl overflow-hidden bg-base-100 backdrop-blur-sm border border-white/10  hover:border-secondary/40 shadow-lg hover:shadow-[0_0_35px_rgba(139,92,226,0.25)] duration-200"
+                              className="group rounded-2xl overflow-hidden bg-base-100 backdrop-blur-sm border border-white/10  hover:border-secondary/40 shadow-lg hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] duration-200 "
                          >
                               <div className="relative w-full h-52">
                                    <img
+                                        loading="lazy"
                                         src={project.image}
                                         alt={project.title}
-                                        className="w-full h-full object-cover opacity-95"
+                                        className="w-full h-full object-cover opacity-95 group-hover:scale-110 duration-400"
                                    />
-                                   <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-black/10"></div>
+                                   <div className="absolute inset-0 bg-gradient-to-t group-hover:scale-110 duration-400 from-black/25 to-black/10"></div>
                                    {/* Title overlay on image */}
                                    <motion.div
                                         initial={{ opacity: 0, y: 25 }}
                                         whileInView={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.7, delay: 0.2 }}
-                                        className="absolute bottom-3 left-3 px-4 py-1.5 rounded-lg bg-black/50 backdrop-blur-lg text-white text-base font-semibold border border-white/10"
+                                        transition={{ duration: 0.6, delay: 0.1 }}
+                                        className="absolute bottom-3 left-3 px-4 py-1.5 rounded-lg bg-black/50 backdrop-blur-lg text-white group-hover:-translate-y-1.5 transition-all duration-300 text-base font-semibold border border-white/10"
                                    >
                                         {project.title}
                                    </motion.div>
                               </div>
                               {/*  */}
                               <div className="p-6">
+                                   <div className="text-base font-semibold text-purple-500 mb-2">
+                                        {project.category}
+                                   </div>
                                    <p className="text-gray-400 text-sm mb-6 mt-3">{project.description}</p>
                                    <div className="flex flex-wrap gap-2 mb-3">
                                         {project.tech.map((tech, i) => (
@@ -128,7 +136,7 @@ const Projects = () => {
                                              transition={{ type: 'spring', stiffness: 350, damping: 20, duration: 1.4 }}
                                              href={project.demo}
                                              target="_blank"
-                                             className="flex items-center gap-2.5 px-5 rounded-lg bg-gradient-to-r from-primary to-base-200/80 py-2.5 text-sm font-medium"
+                                             className="flex items-center gap-2.5 px-5 rounded-lg bg-gradient-to-r from-purple-600/90 to-indigo-500 py-2.5 text-sm font-medium text-white"
                                         >
                                              <FaExternalLinkAlt size={15} /> Live Demo
                                         </motion.a>
