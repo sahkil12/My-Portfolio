@@ -43,7 +43,7 @@ const projects = [
 
 const Projects = () => {
      return (
-          <div className="py-6 md:py-14 px-5 lg:px-16 2xl:px-40 text-gray-300">
+          <div className="py-6 md:py-14 px-3 lg:px-16 2xl:px-40 text-gray-300">
                {/* Title */}
                <div className="text-center mb-16">
                     <motion.h2

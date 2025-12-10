@@ -10,7 +10,7 @@ const About = () => {
      ];
 
      return (
-          <div className="py-14 px-5 md:px-16 text-gray-300">
+          <div className="py-14 px-3 md:px-16 text-gray-300">
                {/* section title */}
                <div className="text-center mb-16">
                     <motion.h2

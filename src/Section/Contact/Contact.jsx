@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import { FaArrowRight, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneFlip } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
@@ -32,7 +32,7 @@ const Contact = () => {
      };
 
      return (
-          <div className="py-24 px-5 lg:px-24 text-gray-300 ">
+          <div className="py-24 px-4 lg:px-24 text-gray-300 ">
                {/* Title */}
                <div className="text-center mb-16">
                     <motion.h2
@@ -148,7 +148,7 @@ const Contact = () => {
                          initial={{ opacity: 0, x: 40 }}
                          whileInView={{ opacity: 1, x: 0 }}
                          transition={{ duration: 0.7 }}
-                         className="bg-base-100 p-6 md:p-8 rounded-2xl shadow-xl/40 shadow-primary/10 space-y-6"
+                         className="bg-base-100 p-4 md:p-8 rounded-2xl shadow-xl/40 shadow-primary/10 space-y-6"
                     >
                          <div>
                               {/* name */}
@@ -158,7 +158,7 @@ const Contact = () => {
                                    placeholder="Your Name"
                                    name="user_name"
                                    required
-                                   className="w-full mt-2 p-3 bg-transparent border border-white/20 rounded-lg focus:border-primary/30 outline-none"
+                                   className="w-full mt-2 p-3 text-sm md:text-base bg-transparent border border-white/20 rounded-lg focus:border-primary/30 outline-none"
                               />
                          </div>
                          {/* email */}
@@ -169,7 +169,7 @@ const Contact = () => {
                                    name="user_email"
                                    required
                                    placeholder="Your Email"
-                                   className="w-full mt-2 p-3 bg-transparent border border-white/20 rounded-lg focus:border-primary/30 outline-none"
+                                   className="w-full mt-2 p-3 text-sm md:text-base bg-transparent border border-white/20 rounded-lg focus:border-primary/30 outline-none"
                               />
                          </div>
                          {/* number */}
@@ -180,7 +180,7 @@ const Contact = () => {
                                    required
                                    name="user_phone"
                                    placeholder="Your Phone number"
-                                   className="w-full mt-2 p-3 bg-transparent border border-white/20 rounded-lg focus:border-primary/30 outline-none"
+                                   className="w-full mt-2 p-3 text-sm md:text-base bg-transparent border border-white/20 rounded-lg focus:border-primary/30 outline-none"
                               />
                          </div>
                          {/* message */}
@@ -190,7 +190,7 @@ const Contact = () => {
                                    rows="5"
                                    name="message"
                                    placeholder="Write Your Message.."
-                                   className="w-full mt-2 p-3 bg-transparent border border-white/20 rounded-lg focus:border-primary/30 outline-none"
+                                   className="w-full mt-2 p-3 text-sm md:text-base bg-transparent border border-white/20 rounded-lg focus:border-primary/30 outline-none"
                               ></textarea>
                          </div>
                          {/* Existing fields */}

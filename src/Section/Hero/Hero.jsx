@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
      return (
-          <section className="relative min-h-[820px] my-3 flex items-center justify-around px-3 md:px-16 xl:px-20 overflow-hidden">
+          <section className="relative min-h-[820px] my-3 flex items-center justify-around px-4 md:px-16 xl:px-20 overflow-hidden">
                {/* background animation color */}
                <div className="
                 absolute inset-0 
-                bg-[radial-gradient(circle_at_center,rgba(140,15,255,0.20),transparent_40%)]
+                bg-[radial-gradient(circle_at_center,rgba(140,15,255,0.18),transparent_45%)]
                 animate-pulseGlow pointer-events-none"></div>
                {/* main grid layout div */}
                <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-16 items-center">
@@ -112,7 +112,7 @@ const Hero = () => {
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5, delay: 0.2 }}
-                                        className="absolute -bottom-3 -right-18 lg:-right-20 -translate-x-1/2 bg-gray-900 border-2 border-primary/30 hover:border-primary/50 px-3.5 py-3.5 lg:px-6 rounded-2xl flex items-center gap-3.5 shadow-lg"
+                                        className="absolute -bottom-3 -right-[70px] lg:-right-20 -translate-x-1/2 bg-gray-900 border-2 border-primary/30 hover:border-primary/50 px-3.5 py-3.5 lg:px-6 rounded-2xl flex items-center gap-3.5 shadow-lg"
                                    >
                                         <motion.span
                                              animate={{ rotate: 360 }}

@@ -107,7 +107,7 @@ const Navbar = ({ scrollTop }) => {
                               {/* Bottom Hire Me Button */}
                               <button
                                    onClick={() => setOpen(false)}
-                                   className="mt-4 w-full px-4 py-3 rounded-lg bg-gradient-to-r from-secondary to-base-200 text-white text-center font-medium transition-all"
+                                   className="mt-2 w-full px-4 py-3 rounded-lg bg-gradient-to-r from-secondary to-base-200 text-white text-center font-medium transition-all"
                               >
                                    Hire Me
                               </button>
