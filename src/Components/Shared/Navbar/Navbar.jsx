@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { IoMenu, IoClose } from "react-icons/io5";
 import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Navbar = ({ scrollTop }) => {
@@ -44,13 +45,12 @@ const Navbar = ({ scrollTop }) => {
                          ))}
                     </div>
                     {/* Desktop Hire Me */}
-                    <a
-                         href="https://mustafa-tazwer.vercel.app/hire-me"
-                         target="_blank"
+                    <NavLink
+                         to={'/hire-me'}
                          className="hidden lg:flex hover:-translate-y-1 px-7 py-2.5 rounded-full bg-gradient-to-r from-primary to-base-200 text-white text-base font-medium hover:opacity-90 transition-all cursor-pointer duration-200"
                     >
                          Hire Me
-                    </a>
+                    </NavLink>
                     {/* Mobile Menu Button */}
                     <button
                          className="lg:hidden rounded-full p-2.5 bg-base-100 border border-base-300/5 text-white text-2xl hover:border-primary/40"
