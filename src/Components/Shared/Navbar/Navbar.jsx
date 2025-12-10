@@ -107,12 +107,13 @@ const Navbar = ({ scrollTop }) => {
                                    ))}
                               </div>
                               {/* Bottom Hire Me Button */}
-                              <button
+                              <NavLink
+                                   to={'/hire-me'}
                                    onClick={() => setOpen(false)}
                                    className="mt-2 w-full px-4 py-3 rounded-lg bg-gradient-to-r from-secondary to-base-200 text-white text-center font-medium transition-all"
                               >
                                    Hire Me
-                              </button>
+                              </NavLink>
                          </motion.div>
                     </div>
                )}
