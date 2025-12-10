@@ -6,7 +6,7 @@ const Hero = () => {
                {/* background animation color */}
                <div className="
                 absolute inset-0 
-                bg-[radial-gradient(circle_at_center,rgba(140,15,255,0.18),transparent_45%)]
+                bg-[radial-gradient(circle_at_center,rgba(140,15,255,0.20),transparent_45%)]
                 animate-pulseGlow pointer-events-none"></div>
                {/* main grid layout div */}
                <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-16 items-center">
@@ -33,7 +33,7 @@ const Hero = () => {
                               initial={{ y: 40, opacity: 0 }}
                               animate={{ y: 0, opacity: 1 }}
                               transition={{ duration: .9 }}
-                              className="text-4xl lg:text-5xl xl:text-7xl font-semibold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-600/80 to-blue-500">
+                              className="text-4xl lg:text-5xl xl:text-7xl font-semibold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-600/95 to-blue-500">
                               Hi, i'm <br />  Mustafa Tazwer
                          </motion.h1>
                          <motion.p
@@ -57,7 +57,7 @@ const Hero = () => {
                                    }}
                                    whileTap={{ scale: 0.95 }}
                                    transition={{ type: 'spring', stiffness: 350, damping: 20, duration: 1.4 }}
-                                   href="#projects" className="px-7 py-2.5 bg-gradient-to-r from-secondary to-base-200 rounded-full cursor-pointer hover:opacity-90 font-semibold text-gray-100 border-none">
+                                   href="#projects" className="px-7 py-2.5 bg-gradient-to-r from-primary to-base-200/90 rounded-full cursor-pointer hover:opacity-95 font-semibold text-gray-100 border-none">
                                    My Projects
                               </motion.a>
                               {/* get in touch button */}
