@@ -45,7 +45,7 @@ const Navbar = ({ scrollTop }) => {
                     </div>
                     {/* Desktop Hire Me */}
                     <a
-                         href="/hire-me"
+                         href="https://mustafa-tazwer.vercel.app/hire-me"
                          target="_blank"
                          className="hidden lg:flex hover:-translate-y-1 px-7 py-2.5 rounded-full bg-gradient-to-r from-primary to-base-200 text-white text-base font-medium hover:opacity-90 transition-all cursor-pointer duration-200"
                     >
