@@ -24,16 +24,20 @@ const HireMe = () => {
                          },
                               'byV8Y8jf7zFVxOFqQ')
                               .then(() => {
-                                   toast.success('Message sent successfully user!')
+                                   toast.success('Your Message sent successfully!')
                               })
                               .catch((err) => {
-                                   toast.error("Something went wrong.")
+                                   if(err){
+                                        toast.error("Something went wrong.")
+                                   }
                               });
                          // form reset 
                          formRef.current.reset();
                     },
                     (error) => {
-                         toast.error("Something went wrong. Try again!");
+                         if(error){
+                              toast.error("Something went wrong. Try again!");
+                         }
                     }
                );
      };

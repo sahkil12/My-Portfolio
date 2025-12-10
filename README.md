@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with **React**, showcasing my skills, projects, and experience as a **MERN Stack Developer**.
 
-[Live Portfolio](https://mustafa-tazwer.vercel.app/)
+🔗 [Live Portfolio](https://mustafa-tazwer.vercel.app/)
 
 
 ## ✨ Features

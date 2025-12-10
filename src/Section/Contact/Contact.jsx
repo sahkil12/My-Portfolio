@@ -28,16 +28,20 @@ const Contact = () => {
                               user_email: formRef.current.user_email.value,
                          }, 'byV8Y8jf7zFVxOFqQ')
                               .then(() => {
-                                   toast.success('Message sent successfully user!')
+                                   toast.success('Your Message sent successfully!')
                               })
                               .catch((err) => {
-                                   toast.error("Something went wrong.")
+                                   if (err) {
+                                        toast.error("Something went wrong.")
+                                   }
                               });
                          // form reset 
                          formRef.current.reset();
                     },
                     (error) => {
-                         toast.error("Failed to send message!");
+                         if (error) {
+                              toast.error("Failed to send message!");
+                         }
                     }
                );
      };
