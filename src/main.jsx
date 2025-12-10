@@ -8,6 +8,7 @@ import {
 import MainLayout from './Layouts/MainLayout.jsx';
 import Home from './Components/Home/Home.jsx';
 import { Toaster } from 'react-hot-toast';
+import HireMe from './Components/HireMe/HireMe.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,9 +17,13 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home></Home>
-      }
+      },
     ]
   },
+  {
+    path: '/hire-me',
+    element: <HireMe></HireMe>
+  }
 ]);
 
 createRoot(document.getElementById('root')).render(

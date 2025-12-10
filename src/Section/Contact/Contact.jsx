@@ -22,7 +22,18 @@ const Contact = () => {
                )
                .then(
                     () => {
-                         toast.success("Message sent successfully!");
+                         // -------thank you message for user mail
+                         emailjs.send('service_k5w6dvh', 'template_ttgl8lt', {
+                              user_name: formRef.current.user_name.value,
+                              user_email: formRef.current.user_email.value,
+                         }, 'byV8Y8jf7zFVxOFqQ')
+                              .then(() => {
+                                   toast.success('Message sent successfully user!')
+                              })
+                              .catch((err) => {
+                                   toast.error("Something went wrong.")
+                              });
+                         // form reset 
                          formRef.current.reset();
                     },
                     (error) => {
@@ -30,7 +41,6 @@ const Contact = () => {
                     }
                );
      };
-
      return (
           <div className="py-24 px-4 lg:px-24 text-gray-300 ">
                {/* Title */}
@@ -129,7 +139,7 @@ const Contact = () => {
                                         backgroundColor: "rgb(129,150,248)"
                                    }}
                                    transition={{ duration: .1 }}
-                                   href="/MUSTAFA TAZWER SHAKIL.pdf"
+                                   href="/MUSTAFA-TAZWER-SHAKIL.pdf"
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    className="flex w-fit items-center gap-1 px-10 py-3 mt-9 border-primary/30 shadow-lg shadow-primary/30 hover:shadow-xl transition-all duration-300 font-semibold border rounded-full bg-gradient-to-r from-purple-600 to-base-200/90 border-none">
