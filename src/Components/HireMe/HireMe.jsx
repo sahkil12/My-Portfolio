@@ -53,7 +53,7 @@ const HireMe = () => {
                     </div>
                </div>
 
-               <div className="max-w-5xl w-full p-2 rounded-xl shadow-lg">
+               <div className="max-w-3xl w-full p-3 rounded-xl shadow-lg">
                     <h1 className="text-3xl md:text-4xl font-bold mb-5 text-center">Hire Me</h1>
                     <p className="text-center font-medium text-gray-300 mb-8">
                          Fill the form below to reach me directly.
