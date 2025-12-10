@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import emailjs from "emailjs-com";
 import toast from 'react-hot-toast';
+import { NavLink } from 'react-router-dom';
 
 const HireMe = () => {
      const formRef = useRef();
@@ -27,7 +28,7 @@ const HireMe = () => {
                                    toast.success('Your Message sent successfully!')
                               })
                               .catch((err) => {
-                                   if(err){
+                                   if (err) {
                                         toast.error("Something went wrong.")
                                    }
                               });
@@ -35,21 +36,21 @@ const HireMe = () => {
                          formRef.current.reset();
                     },
                     (error) => {
-                         if(error){
+                         if (error) {
                               toast.error("Something went wrong. Try again!");
                          }
                     }
                );
      };
      return (
-          <div className="min-h-screen flex flex-col items-center bg-accent text-white justify-center">
-
-               <div className={`w-full transition-all duration-400 `}>
-                    {/* navbar */}
-                    <div className={`w-full mx-auto py-5 px-4 xl:px-16 flex justify-start mb-6`}>
+          <div className="h-screen flex flex-col items-center bg-accent text-white justify-center">
+               {/* navbar */}
+               <div className='w-full '>
+                    <div className={`w-full mb-10 md:mb-5 md:w-[84%] mx-auto py-6 px-5 xl:px-16 flex justify-between items-center`}>
                          <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary/85 to-base-200 ">
-                              <a href='https://mustafa-tazwer.vercel.app/'> Mustafa Tazwer.</a>
+                              Mustafa Tazwer.
                          </h1>
+                         <NavLink to={'/'} className='px-7 py-2.5 font-semibold rounded-full bg-gradient-to-r from-primary/95 to-base-200 transition-all duration-300 hover:-translate-y-1'>Home</NavLink>
                     </div>
                </div>
 
