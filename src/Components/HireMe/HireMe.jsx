@@ -47,18 +47,19 @@ const HireMe = () => {
                {/* navbar */}
                <div className='w-full '>
                     <div className={`w-full mb-10 md:mb-5 md:w-[84%] mx-auto py-6 px-5 xl:px-16 flex justify-between items-center`}>
-                         <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary/85 to-base-200 ">
+                         <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary to-base-200 ">
                               Mustafa Tazwer.
                          </h1>
-                         <NavLink to={'/'} className='px-7 py-2.5 font-semibold rounded-full bg-gradient-to-r from-primary/95 to-base-200 transition-all duration-300 hover:-translate-y-1'>Home</NavLink>
+                         <NavLink to={'/'} className='px-7 py-2.5 font-semibold rounded-full bg-gradient-to-r from-primary to-base-200 transition-all duration-300 hover:-translate-y-1'>Home</NavLink>
                     </div>
                </div>
 
                <div className="max-w-3xl w-full p-3 rounded-xl shadow-lg">
-                    <h1 className="text-3xl md:text-4xl font-bold mb-5 text-center">Hire Me</h1>
-                    <p className="text-center font-medium text-gray-300 mb-8">
+                    <h1 className="text-3xl md:text-4xl font-bold mb-3 text-center">Hire Me</h1>
+                    <p className="text-center font-medium text-gray-300 ">
                          Fill the form below to reach me directly.
                     </p>
+                    <div className="h-1.5 mb-9 mx-auto w-44 mt-5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>
                     {/* Contact Form */}
                     <motion.form
                          ref={formRef}
