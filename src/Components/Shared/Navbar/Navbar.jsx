@@ -36,7 +36,7 @@ const Navbar = ({ scrollTop }) => {
                                    offset={-100}
                                    duration={500}
                                    onSetActive={() => setActiveMobile(item.id)}
-                                   className={`px-4 py-2 text-sm font-medium rounded-full cursor-pointer ${activeMobile === item.id ? "bg-gradient-to-r from-primary to-base-200 text-white shadow-lg"
+                                   className={`px-4 py-2 text-sm font-medium rounded-full cursor-pointer ${activeMobile === item.id ? "bg-gradient-to-r from-purple-600/90 to-base-200 text-white shadow-lg"
                                         : "text-gray-400 hover:text-white hover:bg-[#1a1e28ae]"
                                         }`}
                               >
@@ -47,7 +47,7 @@ const Navbar = ({ scrollTop }) => {
                     {/* Desktop Hire Me */}
                     <NavLink
                          to={'/hire-me'}
-                         className="hidden lg:flex hover:-translate-y-1 px-7 py-2.5 rounded-full bg-gradient-to-r from-purple-500 to-base-200 text-white text-base font-medium hover:opacity-90 transition-all cursor-pointer duration-200"
+                         className="hidden lg:flex hover:-translate-y-1 px-7 py-2.5 rounded-full bg-gradient-to-r from-purple-600 to-base-200 text-white text-base font-medium hover:opacity-90 transition-all cursor-pointer duration-200"
                     >
                          Hire Me
                     </NavLink>
