@@ -22,7 +22,7 @@ const Navbar = ({ scrollTop }) => {
                }`}>
                {/* navbar */}
                <div className={`md:w-[84%] mx-auto py-5 px-4 xl:px-16 flex items-center justify-between`}>
-                    <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary to-base-200">
+                    <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500/90 to-base-200">
                          <a href="#home"> Mustafa Tazwer.</a>
                     </h1>
                     {/* Desktop Menu */}
@@ -65,7 +65,7 @@ const Navbar = ({ scrollTop }) => {
                          className="fixed inset-0 bg-[#0B0E13] bg-opacity-80 backdrop-blur-xl z-50 py-5 px-4 md:px-4 flex flex-col">
                          {/* Top Bar */}
                          <div className="flex items-center justify-between mb-6">
-                              <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-base-200">
+                              <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500/90 to-base-200">
                                    <a href="#home"> Mustafa Tazwer.</a>
                               </h1>
                               <button
@@ -112,7 +112,7 @@ const Navbar = ({ scrollTop }) => {
                                    }>
                                    <button
                                         onClick={() => setOpen(false)}
-                                        className="mt-2 w-full px-4 py-3 rounded-lg bg-gradient-to-r from-secondary to-base-200 text-white text-center font-medium transition-all"
+                                        className="mt-2 w-full px-4 py-3 rounded-lg bg-gradient-to-r from-purple-600/90 to-base-200 text-white text-center font-medium transition-all"
                                    >
                                         Hire Me
                                    </button>
