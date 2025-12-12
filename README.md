@@ -99,7 +99,7 @@ Mustafa Tazwer
 ![Footer](./public/footer.png)
 
 -----
-
+**Full Page**
 ![Portfolio Screenshot](./public/portfolio.png)
 
 **⭐ If you like this project, please give it a star!**
