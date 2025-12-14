@@ -43,14 +43,14 @@ const HireMe = () => {
                );
      };
      return (
-          <div className="h-screen flex flex-col items-center bg-accent text-white justify-center">
+          <div className="min-h-screen flex flex-col items-center bg-accent text-white justify-center">
                {/* navbar */}
                <div className='w-full '>
                     <div className={`w-full mb-10 md:mb-5 md:w-[84%] mx-auto py-6 px-5 xl:px-16 flex justify-between items-center`}>
-                         <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary to-base-200 ">
+                         <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600/95 to-base-200 ">
                               Mustafa Tazwer.
                          </h1>
-                         <NavLink to={'/'} className='px-7 py-2.5 font-semibold rounded-full bg-gradient-to-r from-primary to-base-200 transition-all duration-300 hover:-translate-y-1'>Home</NavLink>
+                         <NavLink to={'/'} className='px-6 md:px-7 py-2 md:py-2.5 text-sm md:text-base font-semibold rounded-full bg-gradient-to-r from-primary to-base-200 transition-all duration-300 hover:-translate-y-1'>Home</NavLink>
                     </div>
                </div>
 
