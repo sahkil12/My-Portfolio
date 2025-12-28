@@ -26,7 +26,7 @@ const projects = [
           category: "Full Stack",
           description: "CTG Blood Connect is a web-based blood donor platform designed to help people in Chittagong quickly find blood donors based on blood group and area.",
           tech: ["React", "Node.js", "MongoDB","Tailwind CSS", "TanStack Query", "DaisyUI", "Firebase"],
-          image: "/public/ctg-blood-connect.png",
+          image: "/ctg-blood-connect.png",
           demo: "https://ctg-blood-connect.web.app/",
           code: "https://github.com/sahkil12/CTG-Blood-Connect-client"
      },
