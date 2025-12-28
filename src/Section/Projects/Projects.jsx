@@ -7,7 +7,7 @@ const projects = [
           title: "ProShift",
           category: "Full Stack",
           description: "A parcel delivery platform with tracking, online payments, rider tools, and admin management for users and parcels.",
-          tech: ["React", "Node.js", "MongoDB", "Firebase", "Tailwind CSS", "Express", "DaisyUI", "Axios", "Stripe", "TanStack Query"],
+          tech: ["React", "Node.js", "MongoDB", "Firebase", "Tailwind CSS", "Express", "DaisyUI", "Stripe", "TanStack Query"],
           image: "/proshift.png",
           demo: "https://proshift-mover.web.app/",
           code: "https://github.com/sahkil12/ProShift-client"
@@ -22,13 +22,13 @@ const projects = [
           code: "https://github.com/sahkil12/TaskHive-Project-client"
      },
      {
-          title: "Coffee Store",
+          title: "CTG Blood Connect",
           category: "Full Stack",
-          description: "An online coffee store with product browsing, cart management, and secure checkout.",
-          tech: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Axios", "DaisyUI"],
-          image: "/coffee-shop.png",
-          demo: "https://coffee-store-client-8e10f.web.app/",
-          code: "https://github.com/sahkil12/Coffee-store-with-auth-client"
+          description: "CTG Blood Connect is a web-based blood donor platform designed to help people in Chittagong quickly find blood donors based on blood group and area.",
+          tech: ["React", "Node.js", "MongoDB","Tailwind CSS", "TanStack Query", "DaisyUI", "Firebase"],
+          image: "/public/ctg-blood-connect.png",
+          demo: "https://ctg-blood-connect.web.app/",
+          code: "https://github.com/sahkil12/CTG-Blood-Connect-client"
      },
      {
           title: "CareerLink",

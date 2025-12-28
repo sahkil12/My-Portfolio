@@ -6,7 +6,7 @@ const Hero = () => {
                {/* background animation color */}
                <div className="
                 absolute inset-0 
-                bg-[radial-gradient(circle_at_center,rgba(140,15,255,0.20),transparent_45%)]
+                bg-[radial-gradient(circle_at_center,rgba(140,15,245,0.20),transparent_40%)]
                 animate-pulseGlow pointer-events-none"></div>
                {/* main grid layout div */}
                <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-16 items-center">

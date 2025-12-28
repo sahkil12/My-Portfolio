@@ -27,7 +27,7 @@ body {
     opacity: 0.5;
   }
   50% {
-    transform: scale(1.18);
+    transform: scale(1.16);
     opacity: 0.80;
   }
   100% {
