@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
      return (
@@ -26,24 +27,60 @@ const Hero = () => {
                               <motion.p
                                    animate={{ scale: [1, 1.4, 1], opacity: [1, .6, 1] }}
                                    transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
-                                   className="bg-primary/70 w-2.5 h-2.5 rounded-full"></motion.p> MERN Stack Developer
+                                   className="bg-primary/70 w-2.5 h-2.5 rounded-full"></motion.p>Actively Seeking Internship
                          </motion.span>
 
                          <motion.h1
-                              initial={{ y: 40, opacity: 0 }}
+                              initial={{ y: 30, opacity: 0 }}
                               animate={{ y: 0, opacity: 1 }}
-                              transition={{ duration: .9 }}
-                              className="text-4xl lg:text-5xl xl:text-7xl font-semibold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-600/95 to-blue-500">
-                              Hi, i'm <br />  Mustafa Tazwer
+                              transition={{ duration: 0.8 }}
+                              className="text-4xl lg:text-5xl xl:text-7xl font-semibold leading-tight 
+                            text-transparent bg-clip-text bg-gradient-to-r from-purple-600/95 to-blue-500"
+                         >
+                              Hi, I’m <br />
+                              <span className="inline-block">
+                                   <Typewriter
+                                        words={['Mustafa Tazwer']}
+                                        loop={1}
+                                        cursor
+                                        cursorStyle="|"
+                                        typeSpeed={120}
+                                        deleteSpeed={0}
+                                        delaySpeed={2000}
+                                   />
+                              </span>
                          </motion.h1>
+                         {/*  */}
+                         <motion.p
+                              initial={{ y: 20, opacity: 0 }}
+                              animate={{ y: 0, opacity: 1 }}
+                              transition={{ duration: 0.8, delay: 0.2 }}
+                              className="mt-4 text-lg md:text-xl text-primary font-medium"
+                         >
+                              <Typewriter
+                                   words={[
+                                        'MERN Stack Developer',
+                                        'React & Node.js Developer',
+                                        'Building Modern Web Applications'
+                                   ]}
+                                   loop={0}
+                                   cursor
+                                   cursorStyle="|"
+                                   typeSpeed={80}
+                                   deleteSpeed={55}
+                                   delaySpeed={1500}
+                              />
+                         </motion.p>
+
                          <motion.p
                               initial={{ y: 40, opacity: 0 }}
                               animate={{ y: 0, opacity: 1.1 }}
                               transition={{ duration: 1.2 }}
                               className="text-gray-400 text-sm md:text-lg/relaxed mt-6 max-w-xl">
-                              Building modern, user-friendly web applications with the <b>MERN Stack</b> while growing my skills and delivering clean, thoughtful digital experiences
+                              I build modern, user-friendly web applications using the <b>MERN stack</b>,
+                              focused on clean UI and real-world functionality.
                          </motion.p>
-                         
+
                          {/* Buttons */}
                          <div className="mt-9 flex flex-wrap gap-4">
                               {/* project button */}
@@ -58,7 +95,7 @@ const Hero = () => {
                                    whileTap={{ scale: 0.95 }}
                                    transition={{ type: 'spring', stiffness: 350, damping: 20, duration: 1.4 }}
                                    href="#projects" className="px-7 py-2.5 bg-gradient-to-r from-primary to-base-200/90 rounded-full cursor-pointer hover:opacity-95 font-semibold text-gray-100 border-none">
-                                   My Projects
+                                   View Projects
                               </motion.a>
                               {/* get in touch button */}
                               <motion.a
@@ -71,8 +108,8 @@ const Hero = () => {
                                    }}
                                    whileTap={{ scale: 0.95 }}
                                    transition={{ type: 'spring', stiffness: 350, damping: 35, duration: 1.4 }}
-                                   href="#contact" className="px-7 py-2.5 bg-base-100 hover:border-primary/90 border border-primary/60 cursor-pointer rounded-full font-semibold text-gray-100">
-                                   Get In Touch
+                                   href="#contact" className="px-8 py-2.5 bg-base-100 hover:border-primary/90 border border-primary/60 cursor-pointer rounded-full font-semibold text-gray-100">
+                                   Let’s Talk
                               </motion.a>
                          </div>
                     </motion.div>
@@ -90,7 +127,7 @@ const Hero = () => {
                               className="relative transition-all duration-600">
                               {/*animation border style */}
                               <div className="absolute inset-0 rounded-full animate-rotateArc before:content-[''] before:absolute before:inset-0 before:rounded-full before:border-[6px] before:border-transparent before:border-t-primary/85 before:border-r-primary/20 before:border-l-base-200/20 before:border-b-base-200/85"></div>
-                                   {/* image */}
+                              {/* image */}
                               <div className="relative rounded-full m-3">
                                    <img
                                         src="/hero-pic.jpg"
@@ -107,7 +144,7 @@ const Hero = () => {
                                    <motion.div
                                         whileHover={{
                                              scale: 1.1,
-                                             rotate: [0,-6, 6, 0],
+                                             rotate: [0, -6, 6, 0],
                                              transition: { duration: 0.3 },
                                         }}
                                         initial={{ opacity: 0, y: 20 }}
@@ -128,7 +165,7 @@ const Hero = () => {
                          </motion.div>
                     </motion.div>
                </div>
-               
+
           </section>
 
      );
