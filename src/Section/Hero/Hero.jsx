@@ -109,7 +109,7 @@ const Hero = () => {
                                    whileTap={{ scale: 0.95 }}
                                    transition={{ type: 'spring', stiffness: 350, damping: 35, duration: 1.4 }}
                                    href="#contact" className="px-8 py-2.5 bg-base-100 hover:border-primary/90 border border-primary/60 cursor-pointer rounded-full font-semibold text-gray-100">
-                                   Lets Talk
+                                   Let’s Talk
                               </motion.a>
                          </div>
                     </motion.div>
