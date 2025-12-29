@@ -95,7 +95,8 @@ const Hero = () => {
                                    <img
                                         src="/hero-pic.jpg"
                                         alt="profile photo"
-                                        className="rounded-full opacity-85 w-56 h-56 md:w-[300px] md:h-[300px] xl:w-[400px] xl:h-[400px] object-cover"
+                                        className="rounded-full opacity-85 w-56 h-56 md:w-[300px] 
+                                        md:h-[300px] xl:w-[400px] xl:h-[400px] object-cover"
                                    />
                               </div>
                               {/* status badges */}

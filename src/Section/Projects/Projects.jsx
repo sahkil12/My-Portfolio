@@ -13,6 +13,15 @@ const projects = [
           code: "https://github.com/sahkil12/ProShift-client"
      },
      {
+          title: "CTG Blood Connect",
+          category: "Full Stack",
+          description: "CTG Blood Connect is a web-based blood donor platform designed to help people in Chittagong quickly find blood donors based on blood group and area.",
+          tech: ["React", "Node.js", "MongoDB", "Tailwind CSS", "TanStack Query", "DaisyUI", "Firebase"],
+          image: "/ctg-blood-connect.png",
+          demo: "https://ctg-blood-connect.web.app/",
+          code: "https://github.com/sahkil12/CTG-Blood-Connect-client"
+     },
+     {
           title: "TaskHive",
           category: "Full Stack",
           description: "A platform connecting people needing help with small online tasks to those who can complete them, like a mini freelance marketplace.",
@@ -22,19 +31,10 @@ const projects = [
           code: "https://github.com/sahkil12/TaskHive-Project-client"
      },
      {
-          title: "CTG Blood Connect",
-          category: "Full Stack",
-          description: "CTG Blood Connect is a web-based blood donor platform designed to help people in Chittagong quickly find blood donors based on blood group and area.",
-          tech: ["React", "Node.js", "MongoDB","Tailwind CSS", "TanStack Query", "DaisyUI", "Firebase"],
-          image: "/ctg-blood-connect.png",
-          demo: "https://ctg-blood-connect.web.app/",
-          code: "https://github.com/sahkil12/CTG-Blood-Connect-client"
-     },
-     {
           title: "CareerLink",
           category: "Full Stack",
           description: "A freelancing marketplace where freelancers can find jobs, clients can post projects, and manage bids with real-time updates.",
-          tech: ["React", "Firebase", "MongoDB", "React Router", "Tailwind CSS", "DaisyUI", "Axios", "TanStack Query"],
+          tech: ["React", "Firebase", "MongoDB", "React Router", "Tailwind CSS", "DaisyUI", "TanStack Query"],
           image: "/careerlink.png",
           demo: "https://careerlink-project.web.app/",
           code: "https://github.com/sahkil12/CareerLink-project-client"
