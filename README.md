@@ -97,7 +97,7 @@ Mustafa Tazwer
 
 -----
 **Full Page**
-![Portfolio Screenshot](./public/portfolio1.png)
+![Portfolio Screenshot](./public/portfolio.png)
 
 **⭐ If you like this project, please give it a star!**
 
