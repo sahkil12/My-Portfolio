@@ -31,7 +31,7 @@ A modern, responsive portfolio website built with **React**, showcasing my skill
 ## 🚀 Getting Started
 ### Prerequisites
 - Node.js (v18 or higher)  
-- npm or yarn
+- npm 
 
 ### Installation
 ```bash
@@ -95,12 +95,9 @@ Mustafa Tazwer
 **Contact**
 ![Contact](./public/contact.png)
 
-**Footer**
-![Footer](./public/footer.png)
-
 -----
 **Full Page**
-![Portfolio Screenshot](./public/portfolio.png)
+![Portfolio Screenshot](./public/portfolio1.png)
 
 **⭐ If you like this project, please give it a star!**
 
