@@ -7,7 +7,7 @@ const Hero = () => {
                {/* background animation color */}
                <div className="
                 absolute inset-0 
-                bg-[radial-gradient(circle_at_center,rgba(140,15,245,0.20),transparent_40%)]
+                bg-[radial-gradient(circle_at_center,rgba(140,15,245,0.25),transparent_40%)]
                 animate-pulseGlow pointer-events-none"></div>
                {/* main grid layout div */}
                <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-16 items-center">
@@ -55,7 +55,7 @@ const Hero = () => {
                               initial={{ y: 20, opacity: 0 }}
                               animate={{ y: 0, opacity: 1 }}
                               transition={{ duration: 0.8, delay: 0.2 }}
-                              className="mt-4 text-lg md:text-xl text-primary font-medium"
+                              className="mt-4 text-lg md:text-xl text-primary/85 font-medium"
                          >
                               <Typewriter
                                    words={[
@@ -80,7 +80,6 @@ const Hero = () => {
                               I build modern, user-friendly web applications using the <b>MERN stack</b>,
                               focused on clean UI and real-world functionality.
                          </motion.p>
-
                          {/* Buttons */}
                          <div className="mt-9 flex flex-wrap gap-4">
                               {/* project button */}
@@ -126,11 +125,11 @@ const Hero = () => {
                               transition={{ duration: 2, ease: "easeInOut", repeat: Infinity }}
                               className="relative transition-all duration-600">
                               {/*animation border style */}
-                              <div className="absolute inset-0 rounded-full animate-rotateArc before:content-[''] before:absolute before:inset-0 before:rounded-full before:border-[6px] before:border-transparent before:border-t-primary/85 before:border-r-primary/20 before:border-l-base-200/20 before:border-b-base-200/85"></div>
+                              <div className="absolute inset-0 rounded-full animate-rotateArc before:content-[''] before:absolute before:inset-0 before:rounded-full before:border-[6px] before:border-transparent before:border-t-primary/85 before:border-r-base-200/20 before:border-l-base-200/20 before:border-b-secondary/90"></div>
                               {/* image */}
                               <div className="relative rounded-full m-3">
                                    <img
-                                        src="/hero-pic.jpg"
+                                        src="/public/profile-pic.png"
                                         alt="profile photo"
                                         className="rounded-full opacity-85 w-56 h-56 md:w-[300px] 
                                         md:h-[300px] xl:w-[400px] xl:h-[400px] object-cover"
