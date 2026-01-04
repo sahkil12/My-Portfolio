@@ -90,7 +90,7 @@ const Contact = () => {
                               transition={{ duration: 0.6, delay: 0.2 }}
                               className="text-gray-400 mt-3 mb-6 max-w-xl leading-relaxed"
                          >
-                              I’d love to connect. Whether you want to discuss a project or just say hello — feel free to reach out.
+                              I’d love to connect. Whether you want to discuss a project or just say hello  feel free to reach out.
                          </motion.p>
                          {/* Contact Details */}
                          <motion.div
@@ -172,7 +172,7 @@ const Contact = () => {
                                    placeholder="Your Name"
                                    name="user_name"
                                    required
-                                   className="w-full mt-2 p-3 text-sm md:text-base bg-transparent border border-white/20 rounded-lg focus:border-primary/30 outline-none"
+                                   className="w-full mt-2 p-3 text-sm md:text-base bg-transparent border border-white/20 rounded-lg focus:border-primary/50 outline-none"
                               />
                          </div>
                          {/* email */}
@@ -183,7 +183,7 @@ const Contact = () => {
                                    name="user_email"
                                    required
                                    placeholder="Your Email"
-                                   className="w-full mt-2 p-3 text-sm md:text-base bg-transparent border border-white/20 rounded-lg focus:border-primary/30 outline-none"
+                                   className="w-full mt-2 p-3 text-sm md:text-base bg-transparent border border-white/20 rounded-lg focus:border-primary/50 outline-none"
                               />
                          </div>
                          {/* number */}
@@ -194,7 +194,7 @@ const Contact = () => {
                                    required
                                    name="user_phone"
                                    placeholder="Your Phone number"
-                                   className="w-full mt-2 p-3 text-sm md:text-base bg-transparent border border-white/20 rounded-lg focus:border-primary/30 outline-none"
+                                   className="w-full mt-2 p-3 text-sm md:text-base bg-transparent border border-white/20 rounded-lg focus:border-primary/50 outline-none"
                               />
                          </div>
                          {/* message */}
@@ -204,7 +204,7 @@ const Contact = () => {
                                    rows="5"
                                    name="message"
                                    placeholder="Write Your Message.."
-                                   className="w-full mt-2 p-3 text-sm md:text-base bg-transparent border border-white/20 rounded-lg focus:border-primary/30 outline-none"
+                                   className="w-full mt-2 p-3 text-sm md:text-base bg-transparent border border-white/20 rounded-lg focus:border-primary/50 outline-none"
                               ></textarea>
                          </div>
                          {/* Existing fields */}

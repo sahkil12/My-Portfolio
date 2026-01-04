@@ -55,7 +55,7 @@ const Hero = () => {
                               initial={{ y: 20, opacity: 0 }}
                               animate={{ y: 0, opacity: 1 }}
                               transition={{ duration: 0.8, delay: 0.2 }}
-                              className="mt-4 text-lg md:text-xl text-primary/85 font-medium"
+                              className="mt-4 text-lg md:text-xl text-primary/95 font-medium"
                          >
                               <Typewriter
                                    words={[
