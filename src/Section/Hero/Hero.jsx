@@ -143,13 +143,13 @@ const Hero = () => {
                                    <motion.div
                                         whileHover={{
                                              scale: 1.1,
-                                             rotate: [0, -6, 6, 0],
+                                             rotate: [0, -5, 5, 0],
                                              transition: { duration: 0.3 },
                                         }}
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5, delay: 0.2 }}
-                                        className="absolute -bottom-3 -right-[70px] lg:-right-20 -translate-x-1/2 bg-gray-900 border-2 border-primary/30 hover:border-primary/50 px-3.5 py-3.5 lg:px-6 rounded-2xl flex items-center gap-3.5 shadow-lg"
+                                        className="absolute -bottom-2.5 lg:-bottom-3 -right-[85px] lg:-right-24 -translate-x-1/2 bg-gray-900 border-2 border-primary/30 hover:border-primary/50 px-3.5 py-3.5 lg:px-6 rounded-2xl flex items-center gap-3.5 shadow-lg"
                                    >
                                         <motion.span
                                              animate={{ rotate: 360 }}
