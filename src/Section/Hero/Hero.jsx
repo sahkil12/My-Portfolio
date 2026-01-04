@@ -3,7 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
      return (
-          <section className="relative min-h-[820px] my-3 flex items-center justify-around px-4 md:px-16 xl:px-20 overflow-hidden">
+          <section className="relative min-h-[870px] my-3 flex items-center justify-around px-4 md:px-16 xl:px-20 overflow-hidden">
                {/* background animation color */}
                <div className="
                 absolute inset-0 
