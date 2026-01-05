@@ -7,7 +7,7 @@ const projects = [
           title: "ProShift",
           category: "Full Stack",
           description: "A parcel delivery platform with tracking, online payments, rider tools, and admin management for users and parcels.",
-          tech: ["React", "Node.js", "MongoDB", "Firebase", "Tailwind CSS", "Express", "DaisyUI", "Stripe", "TanStack Query"],
+          tech: ["React", "Node.js", "MongoDB", "Firebase", "Tailwind CSS", "Express", "DaisyUI", "Axios", "Stripe", "TanStack Query"],
           image: "/proshift.png",
           demo: "https://proshift-mover.web.app/",
           code: "https://github.com/sahkil12/ProShift-client"
@@ -16,7 +16,7 @@ const projects = [
           title: "CTG Blood Connect",
           category: "Full Stack",
           description: "CTG Blood Connect is a web-based blood donor platform designed to help people in Chittagong quickly find blood donors based on blood group and area.",
-          tech: ["React", "Node.js", "MongoDB", "Tailwind CSS", "TanStack Query", "DaisyUI", "Firebase"],
+          tech: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Axios", "TanStack Query", "DaisyUI", "Firebase"],
           image: "/ctg-blood-connect.png",
           demo: "https://ctg-blood-connect.web.app/",
           code: "https://github.com/sahkil12/CTG-Blood-Connect-client"
@@ -34,7 +34,7 @@ const projects = [
           title: "CareerLink",
           category: "Full Stack",
           description: "A freelancing marketplace where freelancers can find jobs, clients can post projects, and manage bids with real-time updates.",
-          tech: ["React", "Firebase", "MongoDB", "React Router", "Tailwind CSS", "DaisyUI", "TanStack Query"],
+          tech: ["React", "Firebase", "MongoDB", "React Router", "Tailwind CSS", "DaisyUI", "Axios", "TanStack Query"],
           image: "/careerlink.png",
           demo: "https://careerlink-project.web.app/",
           code: "https://github.com/sahkil12/CareerLink-project-client"
