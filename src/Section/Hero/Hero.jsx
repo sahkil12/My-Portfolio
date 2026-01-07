@@ -129,7 +129,7 @@ const Hero = () => {
                               {/* image */}
                               <div className="relative rounded-full m-3">
                                    <img
-                                        src="/profile-pic.png"
+                                        src="/mustafa-tazwer-hero-image.webp"
                                         alt="profile photo"
                                         className="rounded-full opacity-85 w-56 h-56 md:w-[300px] 
                                         md:h-[300px] xl:w-[420px] xl:h-[420px] object-cover"
