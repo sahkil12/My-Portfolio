@@ -23,7 +23,16 @@ const Navbar = ({ scrollTop }) => {
                {/* navbar */}
                <div className={`md:w-[84%] mx-auto py-5 px-4 xl:px-16 flex items-center justify-between`}>
                     <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500/90 to-base-200">
-                         <a href="#home"> Mustafa Tazwer.</a>
+                         <Link
+                              to="home"
+                              spy={true}
+                              smooth={true}
+                              offset={-100}
+                              duration={200}
+                              className="cursor-pointer"
+                         >
+                              Mustafa Tazwer.
+                         </Link>
                     </h1>
                     {/* Desktop Menu */}
                     <div className="hidden lg:flex items-center gap-4 bg-base-100 px-2 py-1.5 rounded-full border border-[#262b36f3]">
@@ -66,7 +75,16 @@ const Navbar = ({ scrollTop }) => {
                          {/* Top Bar */}
                          <div className="flex items-center justify-between mb-6">
                               <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500/90 to-base-200">
-                                   <a href="#home"> Mustafa Tazwer.</a>
+                                   <Link
+                                        to="home"
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-100}
+                                        duration={200}
+                                        className="cursor-pointer"
+                                   >
+                                        Mustafa Tazwer.
+                                   </Link>
                               </h1>
                               <button
                                    className="text-primary p-2.5 rounded-full bg-base-300/10 text-2xl"
