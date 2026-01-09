@@ -3,7 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
      return (
-          <section className="relative min-h-[870px] my-3 flex items-center justify-around px-4 md:px-16 xl:px-20 overflow-hidden">
+          <section className="relative min-h-[850px] my-3 flex items-center justify-around px-4 md:px-16 xl:px-20 overflow-hidden">
                {/* background animation color */}
                <div className="
                 absolute inset-0 
@@ -132,7 +132,7 @@ const Hero = () => {
                                         src="/mustafa-tazwer-hero-image.webp"
                                         alt="profile photo"
                                         className="rounded-full opacity-85 w-56 h-56 md:w-[300px] 
-                                        md:h-[300px] xl:w-[420px] xl:h-[420px] object-cover"
+                                        md:h-[300px] xl:w-[420px] xl:h-[420px] object-cover bg-primary/35"
                                    />
                               </div>
                               {/* status badges */}
