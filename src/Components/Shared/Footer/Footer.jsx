@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaFacebook, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFacebook, FaTwitter, FaInstagram  } from "react-icons/fa";
 import { motion } from 'framer-motion';
 
 const Footer = () => {
@@ -6,6 +6,7 @@ const Footer = () => {
           { icon: <FaLinkedin />, label: "LinkedIn", link: "https://www.linkedin.com/in/md-mustafa32/" },
           { icon: <FaGithub />, label: "GitHub", link: "https://github.com/sahkil12" },
           { icon: <FaFacebook />, label: "Facebook", link: "https://www.facebook.com/tazwer.shakil/" },
+          { icon: <FaInstagram  />, label: "Instagram", link: "https://www.instagram.com/mustafatazwer/" },
           { icon: <FaTwitter />, label: "Twitter", link: "https://x.com/MustafaTaz11432" },
      ];
 
