@@ -9,10 +9,12 @@ import MainLayout from './Layouts/MainLayout.jsx';
 import Home from './Components/Home/Home.jsx';
 import { Toaster } from 'react-hot-toast';
 import HireMe from './Components/HireMe/HireMe.jsx';
+import NotFound from './Components/ErrorPage/NotFound.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <NotFound></NotFound>,
     children: [
       {
         index: true,
