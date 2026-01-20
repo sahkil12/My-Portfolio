@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
      const socials = [
-          { icon: <FaLinkedin />, label: "LinkedIn", link: "https://www.linkedin.com/in/md-mustafa32/" },
+          { icon: <FaLinkedin />, label: "LinkedIn", link: "https://www.linkedin.com/in/mustafa-tazwer/" },
           { icon: <FaGithub />, label: "GitHub", link: "https://github.com/sahkil12" },
           { icon: <FaFacebook />, label: "Facebook", link: "https://www.facebook.com/tazwer.shakil/" },
           { icon: <FaInstagram  />, label: "Instagram", link: "https://www.instagram.com/mustafatazwer/" },
