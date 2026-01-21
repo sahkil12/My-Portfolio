@@ -49,7 +49,7 @@ const Footer = () => {
                               <a
                                    key={link.id}
                                    href={`#${link.id}`}
-                                   className="font-medium hover:translate-y-[-2px] hover:text-gray-900 transition-all duration-300"
+                                   className="font-medium hover:translate-y-[-2px] active:translate-y-[-2px] hover:text-gray-900 transition-all duration-300"
                               >
                                    {link.name}
                               </a>
@@ -83,11 +83,11 @@ const Footer = () => {
                                    href={s.link}
                                    target="_blank"
                                    rel="noopener noreferrer"
-                                   className="relative group p-3 rounded-full bg-[#1a1a1a] hover:-translate-y-1.5 transition-all duration-300 hover:bg-gradient-to-r from-primary/90 to-base-200"
+                                   className="relative group p-3 rounded-full bg-[#1a1a1a] hover:-translate-y-1.5 active:-translate-y-1.5 transition-all duration-300 hover:bg-gradient-to-r from-primary/90 to-base-200 active:bg-gradient-to-r from-primary/90 to-base-200"
                               >
                                    {s.icon}
                                    <span
-                                        className="absolute bottom-14 left-1/2 -translate-x-1/2  bg-gradient-to-r from-primary/90 to-base-200 text-sm px-2 py-1 rounded opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300"
+                                        className="absolute bottom-14 left-1/2 -translate-x-1/2  bg-gradient-to-r from-primary/90 to-base-200 text-sm px-2 py-1 rounded opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 group-active:opacity-100 group-active:scale-100 transition-all duration-300"
                                    >
                                         {s.label}
                                    </span>
@@ -100,7 +100,7 @@ const Footer = () => {
                          whileInView={{ opacity: 1 }}
                          transition={{ delay: 0.6, duration: 1 }}
                          viewport={{ once: true }}
-                         className="text-sm md:text-base text-white mt-3 pt-8 border-t border-gray-400 w-full text-center opacity-70 hover:opacity-100 transition-all duration-300"
+                         className="text-sm md:text-base text-white mt-3 pt-8 border-t border-gray-400 w-full text-center"
                     >
                          © 2025 Mustafa Tazwer. All rights reserved.
                     </motion.p>

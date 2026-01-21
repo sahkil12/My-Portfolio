@@ -76,11 +76,11 @@ const About = () => {
                                              href={social.link}
                                              target="_blank"
                                              rel="noopener noreferrer"
-                                             className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center shadow-lg/30 shadow-primary/40 hover:bg-gradient-to-r from-purple-500/90 to-indigo-500"
+                                             className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center shadow-lg/30 shadow-primary/40 hover:bg-gradient-to-r from-purple-500/90 to-indigo-500 active:bg-gradient-to-r from-purple-500/90 to-indigo-500"
                                              whileHover={{ scale: 1.2, color: "#fff" }}
                                              whileTap={{ scale: 0.7 }}
                                         >
-                                             {social.icon}
+                                             {social.icon} 
                                         </motion.a>
                                    ))}
                               </div>
