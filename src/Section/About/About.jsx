@@ -55,7 +55,8 @@ const About = () => {
                               {/* image */}
                               <img
                                    src="/about1.jpg"
-                                   alt="about photo"
+                                   alt="Mustafa Tazwer About Photo"
+                                   loading="lazy"
                                    className="w-56 h-56 md:w-[330px] md:h-[330px] object-cover rounded-full opacity-80 shadow-xl m-2.5 transition-all duration-500"
                               />
                               {/* glow border */}
