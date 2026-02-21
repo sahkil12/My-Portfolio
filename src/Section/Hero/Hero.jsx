@@ -71,13 +71,13 @@ const Hero = () => {
                                    delaySpeed={1500}
                               />
                          </motion.p>
-
+                         {/* description */}
                          <motion.p
                               initial={{ y: 40, opacity: 0 }}
                               animate={{ y: 0, opacity: 1.1 }}
                               transition={{ duration: 1.2 }}
                               className="text-gray-400 text-sm md:text-lg/relaxed mt-6 max-w-xl">
-                              I build modern, user-friendly web applications using the <b>MERN stack</b>,
+                              I help businesses build modern, fast, and scalable websites and web applications,
                               focused on clean UI and real-world functionality.
                          </motion.p>
                          {/* Buttons */}
