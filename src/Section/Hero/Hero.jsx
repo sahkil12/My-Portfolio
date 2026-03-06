@@ -3,14 +3,14 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
      return (
-          <section className="relative min-h-[850px] my-3 flex items-center justify-around px-4 md:px-16 xl:px-20 overflow-hidden">
+          <section className="relative min-h-[90vh] my-3 flex items-center justify-around px-4 md:px-16 xl:px-20 overflow-hidden">
                {/* background animation color */}
                <div className="
                 absolute inset-0 
                 bg-[radial-gradient(circle_at_center,rgba(140,15,245,0.25),transparent_40%)]
                 animate-pulseGlow pointer-events-none"></div>
                {/* main grid layout div */}
-               <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-16 items-center">
+               <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-16 items-center">
                     {/* Left details text Content */}
                     <motion.div
                          initial={{ opacity: 0, x: -65 }}
@@ -23,12 +23,12 @@ const Hero = () => {
                               initial={{ x: -40 }}
                               animate={{ x: 0 }}
                               transition={{ duration: .8 }}
-                              className="px-5 py-2.5 rounded-full bg-primary/10 text-primary/95 border border-primary/50 text-xs md:text-sm font-medium flex items-center w-fit gap-3 mb-7">
+                              className="px-5 py-2.5 rounded-full bg-primary/10 text-primary/95 border border-primary/50 text-xs md:text-sm xl:text-[15px] font-medium flex items-center w-fit gap-3 mb-7">
                               <motion.p
                                    animate={{ scale: [1, 1.4, 1], opacity: [1, .6, 1] }}
                                    transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
                                    className="bg-primary/90 w-2.5 h-2.5 rounded-full"></motion.p>
-                                   Open to front-end & Mern-stack opportunity
+                             Open to Frontend & MERN Roles
                          </motion.span>
 
                          <motion.h1
@@ -39,17 +39,7 @@ const Hero = () => {
                             text-transparent bg-clip-text bg-gradient-to-r from-purple-600/95 to-blue-500"
                          >
                               Hi, I’m <br />
-                              <span className="inline-block">
-                                   <Typewriter
-                                        words={['Mustafa Tazwer']}
-                                        loop={1}
-                                        cursor
-                                        cursorStyle="|"
-                                        typeSpeed={120}
-                                        deleteSpeed={0}
-                                        delaySpeed={2000}
-                                   />
-                              </span>
+                              Mustafa Tazwer
                          </motion.h1>
                          {/*  */}
                          <motion.p
@@ -62,6 +52,7 @@ const Hero = () => {
                                    words={[
                                         'MERN Stack Developer',
                                         'React & Node.js Developer',
+                                        'Front-end Developer',
                                         'Building Modern Web Applications'
                                    ]}
                                    loop={0}
@@ -77,9 +68,9 @@ const Hero = () => {
                               initial={{ y: 40, opacity: 0 }}
                               animate={{ y: 0, opacity: 1.1 }}
                               transition={{ duration: 1.2 }}
-                              className="text-gray-400 text-sm md:text-lg/relaxed mt-6 max-w-xl">
-                              I help businesses build modern, fast, and scalable websites and web applications,
-                              focused on clean UI and real-world functionality.
+                              className="text-gray-300/90 text-sm md:text-lg/relaxed mt-6 max-w-xl">
+                              I build modern, fast and scalable web applications
+                              with clean UI and real-world functionality.
                          </motion.p>
                          {/* Buttons */}
                          <div className="mt-9 flex flex-wrap gap-4">
@@ -95,7 +86,7 @@ const Hero = () => {
                                    whileTap={{ scale: 0.95 }}
                                    transition={{ type: 'spring', stiffness: 350, damping: 20, duration: 1.4 }}
                                    href="#projects" className="px-7 py-2.5 bg-gradient-to-r from-primary to-base-200/90 rounded-full cursor-pointer hover:opacity-95 font-semibold text-gray-100 border-none">
-                                   View Projects
+                                   View My Work
                               </motion.a>
                               {/* get in touch button */}
                               <motion.a
@@ -133,6 +124,7 @@ const Hero = () => {
                                         src="/mustafa-tazwer-hero-image.webp"
                                         alt="Mustafa Tazwer Profile Photo"
                                         loading="lazy"
+                                        decoding="async"
                                         className="rounded-full opacity-85 w-56 h-56 md:w-[300px] 
                                         md:h-[300px] xl:w-[420px] xl:h-[420px] object-cover bg-primary/35"
                                    />
@@ -143,23 +135,23 @@ const Hero = () => {
                                    transition={{ duration: 3, repeat: Infinity }}
                               >
                                    <motion.div
-                                        whileHover={{
-                                             scale: 1.1,
-                                             rotate: [0, -5, 5, 0],
-                                             transition: { duration: 0.3 },
-                                        }}
+                                        // whileHover={{
+                                        //      scale: 1.1,
+                                        //      rotate: [0, -5, 5, 0],
+                                        //      transition: { duration: 0.3 },
+                                        // }}
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5, delay: 0.2 }}
-                                        className="absolute -bottom-2.5 lg:-bottom-3 -right-[85px] lg:-right-24 -translate-x-1/2 bg-gray-900 border-2 border-primary/30 hover:border-primary/50 px-3.5 py-3.5 lg:px-6 rounded-2xl flex items-center gap-3.5 shadow-lg"
+                                        className="absolute -bottom-2.5 lg:-bottom-3 -right-[85px] lg:-right-28 -translate-x-1/2 bg-gray-900 border-2 border-primary/30 hover:border-primary/50 px-3.5 py-3.5 lg:px-6 rounded-2xl flex items-center gap-3.5 shadow-lg"
                                    >
                                         <motion.span
                                              animate={{ rotate: 360 }}
                                              transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
                                              className="bg-primary/40 p-2 lg:p-3 rounded-full text-base md:text-xl">🚀</motion.span>
                                         <span>
-                                             <p className="text-sm lg:text-base font-semibold text-gray-400 mb-1">Status</p>
-                                             <p className="text-xs lg:text-sm font-semibold text-gray-300">Ready to Work</p>
+                                             <p className="text-sm lg:text-[15px] font-semibold text-gray-400 mb-1">Status</p>
+                                             <p className="text-xs lg:text-[13px] font-medium text-gray-300/85">Available for Opportunities</p>
                                         </span>
                                    </motion.div>
                               </motion.section>
