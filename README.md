@@ -90,14 +90,14 @@ Mustafa Tazwer
 ![Skills](./public/skills.png)
 
 **Projects**
-![Projects](./public/projects.png)
+![Projects](./public/portfolio-projects.png)
 
 **Contact**
 ![Contact](./public/contact.png)
 
 -----
 **Full Page**
-![Portfolio Screenshot](./public/portfolio.png)
+![Portfolio Screenshot](./public/portfolio-full-page.png)
 
 **⭐ If you like this project, please give it a star!**
 
