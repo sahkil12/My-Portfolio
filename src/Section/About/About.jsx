@@ -123,8 +123,8 @@ const About = () => {
                                    experiences. I keep learning new tools and improving my work every day.
                               </p>
                               <p className="text-gray-400 text-sm md:text-base font-medium leading-7 mb-8">
-                                   My journey started with basic HTML pages and slowly moved into JavaScript,
-                                   React, Node, and MongoDB. Each project helps me grow and become better.
+                                   My journey started with basic HTML pages and slowly moved into JavaScript, TypeScript,
+                                   React, Next Js, Node, and MongoDB. Each project helps me grow and become better.
                               </p>
                          </motion.section>
                          {/* my details info  */}
@@ -150,10 +150,10 @@ const About = () => {
                                         TECHNICAL SKILLS
                                    </h2>
                                    <ul className="space-y-1 text-sm text-gray-400 list-disc ml-5">
-                                        <li><strong>Frontend:</strong>  HTML, CSS, JavaScript, React, Tailwind</li>
+                                        <li><strong>Frontend:</strong>  HTML, CSS, JavaScript, TypeScript, React, Tailwind, NextJs</li>
                                         <li><strong>Backend:</strong> Node.js, Express.js</li>
                                         <li><strong>Database:</strong> MongoDB</li>
-                                        <li><strong>Tools:</strong> Git, GitHub, Vercel, Netlify, Surge, Firebase</li>
+                                        <li><strong>Tools:</strong> Git, GitHub, Vercel, Netlify, Surge, Firebase, Render</li>
                                    </ul>
                               </motion.div>
                               {/* education details */}

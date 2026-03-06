@@ -23,11 +23,12 @@ const Hero = () => {
                               initial={{ x: -40 }}
                               animate={{ x: 0 }}
                               transition={{ duration: .8 }}
-                              className="px-4 py-3 rounded-full bg-primary/10 text-primary/95 border border-primary/50 text-xs md:text-sm font-medium flex items-center w-fit gap-3 mb-7">
+                              className="px-5 py-2.5 rounded-full bg-primary/10 text-primary/95 border border-primary/50 text-xs md:text-sm font-medium flex items-center w-fit gap-3 mb-7">
                               <motion.p
                                    animate={{ scale: [1, 1.4, 1], opacity: [1, .6, 1] }}
                                    transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
-                                   className="bg-primary/70 w-2.5 h-2.5 rounded-full"></motion.p>Actively Seeking Internship
+                                   className="bg-primary/90 w-2.5 h-2.5 rounded-full"></motion.p>
+                                   Open to front-end & Mern-stack opportunity
                          </motion.span>
 
                          <motion.h1

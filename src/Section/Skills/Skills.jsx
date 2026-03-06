@@ -1,21 +1,23 @@
 import { motion } from "framer-motion";
 import { FaReact, FaNode, FaHtml5, FaGithub, FaCss3Alt } from "react-icons/fa";
-import { SiJavascript, SiMongodb, SiExpress, SiTailwindcss, SiRedux, SiAxios } from "react-icons/si";
+import { SiJavascript, SiMongodb, SiExpress, SiTailwindcss, SiRedux, SiAxios, SiNextdotjs, SiTypescript} from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
 const skills = [
-     { name: "HTML5", icon: <FaHtml5 size={30} color="#E44D26" />, level: 95, color: "#E44D26" },
-     { name: "CSS3", icon: <FaCss3Alt size={30} color="#1572B6" />, level: 90, color: "#1572B6" },
+     { name: "HTML5/CSS3", icon: <FaHtml5 size={30} color="#E44D26" /> , level: 95, color: "#E44D26" },
+     // { name: "CSS3", icon: <FaCss3Alt size={30} color="#1572B6" />, level: 90, color: "#1572B6" },
      { name: "Tailwind CSS", icon: <SiTailwindcss size={30} color="#38BDF8" />, level: 95, color: "#38BDF8" },
      { name: "JavaScript", icon: <SiJavascript size={30} color="#F7DF1E" />, level: 90, color: "#F7DF1E" },
+     { name: "TypeScript", icon: <SiTypescript size={30} color="#007ACC" />, level: 75, color: "#007ACC" },
      { name: "React.js", icon: <FaReact size={30} color="#61DAFB" />, level: 85, color: "#61DAFB" },
      { name: "Node.js", icon: <FaNode size={30} color="#3C873A" />, level: 80, color: "#3C873A" },
      { name: "Express.js", icon: <SiExpress size={30} color="#aaaaaa" />, level: 75, color: "#aaaaaa" },
      { name: "MongoDB", icon: <SiMongodb size={30} color="#4DB33D" />, level: 80, color: "#4DB33D" },
+     { name: "Next Js", icon: <SiNextdotjs className=" rounded-full" size={32} color="#fffff" />, level: 70, color: "#ffffff" },
      { name: "Axios / Fetch", icon: <SiAxios size={30} color="#5A29E4" />, level: 80, color: "#5A29E4" },
      { name: "Redux", icon: <SiRedux size={30} color="#764ABC" />, level: 70, color: "#764ABC" },
      { name: "Git & GitHub", icon: <FaGithub size={30} color="#F1502F" />, level: 85, color: "#F1502F" },
-     { name: "VS Code", icon: <VscVscode size={30} color="#007ACC" />, level: 90, color: "#007ACC" }
+     // { name: "VS Code", icon: <VscVscode size={30} color="#007ACC" />, level: 90, color: "#007ACC" }
 ];
 
 const Skills = () => {
@@ -56,7 +58,7 @@ const Skills = () => {
                               transition={{ duration: 0.5 }}
                               whileHover={{ scale: 1.05 }}
                               className={`p-5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/15
-                                         shadow-[0_0_15px_rgba(139,95,245,0.2)] hover:shadow-[0_0_25px_rgba(139,92,236,0.35)]
+                                         shadow-[0_0_15px_rgba(139,95,245,0.2)] hover:shadow-[0_0_25px_rgba(139,92,236,0.35)] cursor-pointer
                                          transition-all duration-300 hover:border-white/40`}
                          >
                               {/* icons and text */}
