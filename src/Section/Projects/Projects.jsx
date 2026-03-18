@@ -98,7 +98,7 @@ const Projects = () => {
                                              <img
                                                   src={project.image}
                                                   alt={project.title}
-                                                  className="w-full h-[250px] sm:h-[300px] xl:h-[380px] object-cover transition duration-500 group-hover:scale-105 group-hover:brightness-80"
+                                                  className="w-full h-[160px] sm:h-[300px] xl:h-[380px] object-cover transition duration-500 group-hover:scale-105 group-hover:brightness-80"
                                              />
                                              {/* Blur Overlay */}
                                              <div className="absolute inset-0 bg-black/40 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-6">
