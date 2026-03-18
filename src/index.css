@@ -68,41 +68,7 @@ body {
     --angle: 360deg;
   }
 }
-/* 
-.snake-border {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 1.5px;
-  border-radius: 32px;
-  overflow: hidden;
-}
 
-.snake-border::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: conic-gradient(
-    from var(--angle),
-    transparent 0deg,
-    transparent 290deg,
-    rgba(136, 81, 224, 0.15) 320deg,
-    rgba(124, 90, 228, 0.95) 336deg,
-    rgba(70, 111, 220, 1) 348deg,
-    rgba(136, 81, 224, 0.55) 360deg
-  );
-  animation: borderRotate 4s linear infinite;
-  filter: drop-shadow(0 0 12px rgba(136, 81, 224, 0.35));
-}
-
-.snake-border::after {
-  content: "";
-  position: absolute;
-  inset: 1.5px;
-  border-radius: 31px;
-  background: #0a0f1d;
-} */
  @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -120,12 +86,12 @@ body {
   position: absolute;
   inset: 0;
   border-radius: 32px;
-  padding: 1.5px;
+  padding: 6px;
   background: conic-gradient(
     from var(--angle),
     transparent 0deg,
     transparent 300deg,
-    rgba(136, 81, 224, 0.25) 320deg,
+    rgba(149, 91, 243, 0.25) 320deg,
     rgba(136, 81, 224, 0.95) 338deg,
     rgba(70, 111, 220, 1) 350deg,
     rgba(136, 81, 224, 0.45) 360deg

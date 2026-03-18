@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import { FaReact, FaNode, FaHtml5, FaGithub, FaCss3Alt } from "react-icons/fa";
+import { FaReact, FaNode, FaHtml5, FaGithub } from "react-icons/fa";
 import { SiJavascript, SiMongodb, SiExpress, SiTailwindcss, SiRedux, SiAxios, SiNextdotjs, SiTypescript} from "react-icons/si";
-import { VscVscode } from "react-icons/vsc";
 
 const skills = [
      { name: "HTML5/CSS3", icon: <FaHtml5 size={30} color="#E44D26" /> , level: 95, color: "#E44D26" },
