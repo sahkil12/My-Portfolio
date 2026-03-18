@@ -4,11 +4,11 @@ import { FiArrowRight, FiDownload, FiLayers, FiZap } from "react-icons/fi";
 
 const Hero = () => {
      return (
-          <section className="relative min-h-[95vh] my-3 flex items-center justify-around px-4 md:px-16 xl:px-20 overflow-hidden">
+          <section className="relative min-h-[95vh] my-3 flex items-center justify-around px-4 md:px-16 xl:px-24 overflow-hidden">
                {/* background animation color */}
                <div className="
                 absolute inset-0 
-                bg-[radial-gradient(circle_at_center,rgba(140,15,245,0.25),transparent_40%)]
+                bg-[radial-gradient(circle_at_center,rgba(140,15,245,0.20),transparent_40%)]
                 animate-pulseGlow pointer-events-none"></div>
                {/* main grid layout div */}
                <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-16 items-center">
@@ -25,22 +25,22 @@ const Hero = () => {
                               initial={{ x: -40, opacity: 0 }}
                               animate={{ x: 0, opacity: 1 }}
                               transition={{ duration: 0.8 }}
-                              className="mb-7 flex w-fit items-center gap-3 rounded-full border border-primary/30 bg-primary/5 px-5 py-2.5 text-xs font-medium text-primary/95 backdrop-blur-xl md:text-sm xl:text-[15px]"
+                              className="mb-5 md:mb-7 flex w-fit items-center gap-3 rounded-full border border-primary/30 bg-primary/10 px-5 py-2.5 text-[10px] sm:text-xs font-medium text-primary/95 backdrop-blur-xl md:text-sm xl:text-[15px]"
                          >
                               <motion.p
                                    animate={{ scale: [1, 1.4, 1], opacity: [1, 0.6, 1] }}
                                    transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-                                   className="h-2.5 w-2.5 rounded-full bg-primary/90 shadow-[0_0_14px_rgba(168,85,247,0.8)]"
+                                   className="h-2.5 w-2.5 rounded-full bg-primary/95 shadow-[0_0_14px_rgba(168,85,247,0.8)]"
                               ></motion.p>
                               Open to Frontend & MERN Roles
                          </motion.span>
-
+                         {/* heading name */}
                          <motion.h1
                               initial={{ y: 30, opacity: 0 }}
                               animate={{ y: 0, opacity: 1 }}
                               transition={{ duration: 0.8 }}
-                              className="text-4xl lg:text-5xl xl:text-7xl font-semibold leading-tight 
-                            text-transparent bg-clip-text bg-gradient-to-r from-purple-600/95 to-blue-500"
+                              className="text-4xl lg:text-5xl xl:text-7xl font-bold leading-tight 
+                            text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-300/90"
                          >
                               Hi, I’m <br />
                               Mustafa Tazwer
@@ -76,13 +76,12 @@ const Hero = () => {
                               I build modern, fast and scalable web applications
                               with clean UI and real-world functionality.
                          </motion.p>
-
                          {/* extra mini highlights */}
                          <motion.div
                               initial={{ opacity: 0, y: 25 }}
                               animate={{ opacity: 1, y: 0 }}
                               transition={{ duration: 0.9, delay: 0.25 }}
-                              className="mt-7 flex flex-wrap gap-3"
+                              className="mt-5 flex flex-wrap gap-3"
                          >
                               <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-gray-300 backdrop-blur-lg md:text-sm">
                                    <FiZap className="text-primary" />
@@ -98,7 +97,7 @@ const Hero = () => {
                               </div>
                          </motion.div>
                          {/* Buttons */}
-                         <div className="mt-9 flex flex-wrap gap-4">
+                         <div className="mt-6 md:mt-10 flex flex-wrap gap-4">
                               {/* project button */}
                               <motion.a
                                    initial={{ opacity: 0, y: 20 }}
@@ -132,58 +131,79 @@ const Hero = () => {
                               </motion.a>
                          </div>
                     </motion.div>
-                    {/* right side - Image part*/}
+                    {/* right side - Image part */}
                     <motion.div
-                         initial={{ opacity: 0, x: 50 }}
+                         initial={{ opacity: 0, x: 60 }}
                          whileInView={{ opacity: 1, x: 0 }}
-                         transition={{ duration: 1 }}
+                         transition={{ duration: 0.9 }}
                          viewport={{ once: false, amount: 0.3 }}
-                         className="flex justify-center xl:justify-end relative"
+                         className="relative flex justify-center xl:justify-end"
                     >
                          <motion.div
-                              animate={{ y: [0, -15, 0] }}
-                              transition={{ duration: 2, ease: "easeInOut", repeat: Infinity }}
-                              className="relative transition-all duration-600">
-                              {/*animation border style */}
-                              <div className="absolute inset-0 rounded-full animate-rotateArc before:content-[''] before:absolute before:inset-0 before:rounded-full before:border-[6px] before:border-transparent before:border-t-primary/85 before:border-r-base-200/20 before:border-l-base-200/20 before:border-b-secondary/90"></div>
-                              {/* image */}
-                              <div className="relative rounded-full m-3">
-                                   <img
-                                        src="/mustafa-tazwer-hero-image.webp"
-                                        alt="Mustafa Tazwer Profile Photo"
-                                        loading="lazy"
-                                        decoding="async"
-                                        className="rounded-full opacity-85 w-56 h-56 md:w-[300px] 
-                                        md:h-[300px] xl:w-[420px] xl:h-[420px] object-cover bg-primary/35"
-                                   />
+                              animate={{ y: [0, -10, 0] }}
+                              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                              className="relative"
+                         >
+                              {/* image card */}
+                              <div className="hero-image-snake relative h-[320px] w-[300px] overflow-hidden rounded-[32px] border border-white/10 bg-white/5 p-3 shadow-[0_20px_80px_rgba(0,0,0,0.45)] backdrop-blur-2xl md:h-[420px] md:w-[360px] xl:h-[500px] xl:w-[420px]">
+                                   {/* inner frame */}
+                                   <div className="relative z-[2] h-full w-full overflow-hidden rounded-[26px] border border-white/10 bg-gradient-to-b from-white/10 to-white/5">
+                                        <img
+                                             src="/public/mustafa-tazwer-image.webp"
+                                             alt="Mustafa Tazwer Profile Photo"
+                                             loading="lazy"
+                                             decoding="async"
+                                             className="h-full w-full object-cover"
+                                        />
+
+                                        {/* image overlay */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-[#060816]/45 via-transparent to-transparent"></div>
+                                   </div>
                               </div>
-                              {/* status badges */}
-                              <motion.section
+
+                              {/* floating card 1 */}
+                              <motion.div
                                    animate={{ y: [0, 10, 0] }}
-                                   transition={{ duration: 3, repeat: Infinity }}
+                                   transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+                                   className="absolute -left-10 top-8 hidden rounded-2xl border border-white/10 bg-[#0b1224]/80 px-4 py-3 backdrop-blur-xl md:block"
                               >
-                                   <motion.div
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.5, delay: 0.2 }}
-                                        className="absolute -bottom-2 lg:-bottom-3 -right-20 lg:-right-28 -translate-x-1/2 bg-gray-900 border-2 border-primary/30 hover:border-primary/50 px-3 py-3 lg:px-6 rounded-2xl flex items-center gap-3.5 shadow-lg"
-                                   >
-                                        <motion.span
-                                             animate={{ rotate: 360 }}
-                                             transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
-                                             className="bg-primary/40 p-2 md:p-3 rounded-full text-sm md:text-xl">🚀</motion.span>
-                                        <span>
-                                             <p className="text-[13px] lg:text-[15px] font-semibold text-gray-400 mb-1">Status</p>
-                                             <p className="text-[11px] lg:text-[13px] font-medium text-gray-300/85">Available for Opportunities</p>
-                                        </span>
-                                   </motion.div>
-                              </motion.section>
+                                   <p className="text-xs text-gray-400">Focus</p>
+                                   <p className="text-sm font-semibold text-white">Premium Frontend UI</p>
+                              </motion.div>
+
+                              {/* floating card 2 */}
+                              <motion.div
+                                   animate={{ y: [0, -10, 0] }}
+                                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                                   className="absolute -bottom-4 -right-6 rounded-2xl border border-white/10 bg-[#0b1224]/85 px-4 py-3 shadow-xl backdrop-blur-xl md:px-5"
+                              >
+                                   <p className="text-xs text-gray-400">Status</p>
+                                   <p className="text-sm font-semibold text-white">Available for Opportunities</p>
+                              </motion.div>
+
+                              {/* extra box 1 */}
+                              <motion.div
+                                   animate={{ x: [0, 8, 0] }}
+                                   transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
+                                   className="absolute -right-8 top-14 hidden rounded-2xl border border-white/10 bg-[#0b1224]/80 px-4 py-3 backdrop-blur-xl lg:block"
+                              >
+                                   <p className="text-xs text-gray-400">Stack</p>
+                                   <p className="text-sm font-semibold text-white">React • Node • MongoDB</p>
+                              </motion.div>
+
+                              {/* extra box 2 */}
+                              <motion.div
+                                   animate={{ x: [0, -8, 0] }}
+                                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                                   className="absolute -left-8 bottom-16 hidden rounded-2xl border border-white/10 bg-[#0b1224]/80 px-4 py-3 backdrop-blur-xl lg:block"
+                              >
+                                   <p className="text-xs text-gray-400">Specialty</p>
+                                   <p className="text-sm font-semibold text-white">Clean UI & Fast Performance</p>
+                              </motion.div>
                          </motion.div>
                     </motion.div>
                </div>
-
           </section>
-
      );
 };
 
