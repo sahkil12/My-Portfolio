@@ -162,7 +162,7 @@ const Contact = () => {
                          initial={{ opacity: 0, x: 40 }}
                          whileInView={{ opacity: 1, x: 0 }}
                          transition={{ duration: 0.7 }}
-                         className="bg-base-100 p-4 md:p-8 rounded-2xl shadow-xl/40 shadow-primary/10 space-y-6"
+                         className="bg-base-100 p-4 md:p-8 border border-white/5 rounded-2xl shadow-xl/30 shadow-primary/10 space-y-6"
                     >
                          <div>
                               {/* name */}

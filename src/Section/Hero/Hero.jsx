@@ -147,7 +147,8 @@ const Hero = () => {
                               className="relative"
                          >
                               {/* image card */}
-                              <div className="hero-image-snake relative h-[340px] w-[300px] overflow-hidden rounded-[32px] border border-white/10 bg-white/5 p-2.5 shadow-[0_20px_80px_rgba(0,0,0,0.45)] backdrop-blur-2xl md:h-[420px] md:w-[360px] xl:h-[520px] xl:w-[440px]">
+                              <div className="hero-image-snake relative h-[340px] w-[300px] overflow-hidden rounded-[32px] border border-white/10 bg-white/5 p-2.5 shadow-[0_20px_80px_rgba(0,0,0,0.45)] backdrop-blur-2xl md:h-[420px] md:w-[360px] xl:h-[520px] 
+                              xl:w-[440px]">
                                    {/* inner frame */}
 
                                    <div className="relative z-[2] h-full w-full overflow-hidden rounded-[26px] border border-white/10 bg-gradient-to-b from-white/10 to-white/5">
@@ -159,14 +160,14 @@ const Hero = () => {
                                              className="h-full w-full object-cover"
                                         />
                                         {/* image overlay */}
-                                        <div className="absolute inset-0 bg-gradient-to-t from-[#060816]/65 via-transparent to-transparent"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-t from-[#060816]/85 via-transparent to-transparent"></div>
                                    </div>
                               </div>
                               {/* floating card 1 */}
                               <motion.div
                                    animate={{ y: [0, 10, 0] }}
                                    transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-                                   className="absolute -left-20 top-26 hidden rounded-2xl border border-white/10 bg-[#0b1224]/75 px-4 py-3 backdrop-blur-2xl sm:block"
+                                   className="absolute -left-20 top-20 hidden rounded-2xl border border-white/10 bg-[#0b1224]/75 px-4 py-3 backdrop-blur-2xl sm:block"
                               >
                                    <span className="flex items-center gap-2 mb-1">
                                         <motion.p
