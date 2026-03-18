@@ -64,7 +64,7 @@ const About = () => {
                          </motion.div>
                          {/* after image text div*/}
                          <div className="mt-10 text-center">
-                              <h2 className="text-3xl lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 font-bold mb-2 ">Mustafa Tazwer Shakil</h2>
+                              <h2 className="text-3xl lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500/95 font-bold mb-2 ">Mustafa Tazwer Shakil</h2>
                               <p className="text-gray-300 font-medium text-sm lg:text-base mb-2">
                                    MERN Stack Developer
                               </p>
