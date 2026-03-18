@@ -19,7 +19,7 @@ const Hero = () => {
                          initial={{ opacity: 0, x: -65 }}
                          whileInView={{ opacity: 1, x: 0 }}
                          transition={{ duration: 0.8 }}
-                         viewport={{ once: false, amount: 0.3 }}
+                         viewport={{ once: true, amount: 0.3 }}
                          className="text-left px-4 md:px-1"
                     >
                          {/* top badges */}
@@ -138,7 +138,7 @@ const Hero = () => {
                          initial={{ opacity: 0, x: 60 }}
                          whileInView={{ opacity: 1, x: 0 }}
                          transition={{ duration: 0.9 }}
-                         viewport={{ once: false, amount: 0.3 }}
+                         viewport={{ once: true, amount: 0.3 }}
                          className="relative flex justify-center xl:justify-end"
                     >
                          <motion.div
@@ -160,7 +160,7 @@ const Hero = () => {
                                              className="h-full w-full object-cover"
                                         />
                                         {/* image overlay */}
-                                        <div className="absolute inset-0 bg-gradient-to-t from-[#060816]/85 via-transparent to-transparent"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-t from-[#060816]/55 via-transparent to-transparent"></div>
                                    </div>
                               </div>
                               {/* floating card 1 */}
