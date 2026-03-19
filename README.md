@@ -65,7 +65,6 @@ This project is configured for easy deployment on Vercel.
 **Deploy to Vercel:**
 Live link:-[(https://mustafa-tazwer.vercel.app/)]
 
-
 ### 👤 Author
 Mustafa Tazwer
 
@@ -90,10 +89,13 @@ Mustafa Tazwer
 ![Skills](./public/skills.png)
 
 **Projects**
-![Projects](./public/portfolio-projects.png)
+![Projects](./public/projects2.png)
 
 **Contact**
 ![Contact](./public/contact.png)
+
+**Hire Me**
+![Hire Me](./public/hire%20me.png)
 
 -----
 **Full Page**
