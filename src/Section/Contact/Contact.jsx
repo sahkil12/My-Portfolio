@@ -47,7 +47,7 @@ const Contact = () => {
           }
      };
 
-     const inputClass = "w-full rounded-2xl border border-white/10 bg-white/5 pl-11 pr-4 py-3.5 text-sm text-white placeholder:text-slate-500 outline-none transition-all duration-300 focus:border-primary/50 focus:bg-white/10 focus:shadow-[0_0_0_4px_rgba(136,81,224,0.12)]"
+     const inputClass = "w-full rounded-2xl border border-white/10 bg-white/5 pl-11 pr-4 py-3.5 text-sm text-white placeholder:text-slate-500 outline-none transition-all duration-300 focus:border-primary/40 focus:bg-white/5 focus:shadow-[0_0_0_4px_rgba(136,81,224,0.12)]"
 
      return (
           <div className="py-24 px-4 lg:px-24 text-gray-300 ">
@@ -172,7 +172,7 @@ const Contact = () => {
                                         <h3 className="text-2xl md:text-3xl font-bold text-white">
                                              Send a Message
                                         </h3>
-                                        <p className="mt-3 text-sm leading-6 text-slate-400">
+                                        <p className="mt-2.5 text-sm leading-6 text-slate-400">
                                              Fill out the form below and I’ll get back to you soon.
                                         </p>
                                    </div>
@@ -180,7 +180,7 @@ const Contact = () => {
                                    <motion.form
                                         ref={formRef}
                                         onSubmit={sendEmail}
-                                        className="space-y-5"
+                                        className="space-y-7"
                                    >
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                                              <div>
@@ -231,7 +231,7 @@ const Contact = () => {
                                                   />
                                              </div>
                                         </div>
-
+                                        {/* message */}
                                         <div>
                                              <label className="mb-2 block text-sm font-medium text-slate-200">
                                                   Message
@@ -247,19 +247,19 @@ const Contact = () => {
                                                   ></textarea>
                                              </div>
                                         </div>
-
+                                        {/* time */}
                                         <input
                                              type="hidden"
                                              name="time"
                                              value={new Date().toLocaleString()}
                                         />
-
+                                        {/* button */}
                                         <motion.button
                                              type="submit"
-                                             whileHover={{ y: -2, scale: 1.01 }}
+                                             whileHover={{  scale: 1.01 }}
                                              whileTap={{ scale: 0.98 }}
                                              transition={{ duration: 0.2 }}
-                                             className="group flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-600/95 to-base-200 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-purple-900/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary/20"
+                                             className="group flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-600/95 to-base-200 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-purple-900/30 transition-all duration-200 hover:shadow-xl hover:shadow-primary/10 cursor-pointer"
                                         >
                                              Send Message
                                              <FiSend className="transition-transform duration-300 group-hover:translate-x-1" />
