@@ -7,47 +7,49 @@ import { FiArrowUpRight, FiMail, FiPhoneCall, FiUser } from 'react-icons/fi';
 
 const HireMe = () => {
      const formRef = useRef();
-     const sendEmail = (e) => {
+
+     const sendEmail = async (e) => {
           e.preventDefault();
-          // hire message mail
-          emailjs
-               .sendForm(
+
+          try {
+               // send to my email
+               await emailjs.sendForm(
                     "service_az99kyt",
                     "template_7xwcmef",
                     formRef.current,
                     "2INs45P1FpExUVDxp"
-               )
-               .then(
-                    () => {
-                         // -------thank you message for user mail
-                         emailjs.send('service_k5w6dvh', 'template_ttgl8lt', {
-                              user_name: formRef.current.user_name.value,
-                              user_email: formRef.current.user_email.value,
-                         },
-                              'byV8Y8jf7zFVxOFqQ')
-                              .then(() => {
-                                   toast.success('Your Message sent successfully!')
-                              })
-                              .catch((err) => {
-                                   if (err) {
-                                        toast.error("Something went wrong.")
-                                   }
-                              });
-                         // form reset 
-                         formRef.current.reset();
-                    },
-                    (error) => {
-                         if (error) {
-                              toast.error("Something went wrong. Try again!");
-                         }
-                    }
                );
+               // send to user
+               await emailjs.send(
+                    "service_az99kyt",
+                    "template_3ju77ka",
+                    {
+                         user_name: formRef.current.user_name.value,
+                         user_email: formRef.current.user_email.value,
+                         user_phone: formRef.current.user_phone.value,
+                         message: formRef.current.message.value,
+                         time: new Date().toLocaleString(),
+                    },
+                    "2INs45P1FpExUVDxp"
+               );
+
+               toast.success("Your message sent successfully!");
+               formRef.current.reset();
+          } catch (error) {
+
+               if (error?.text?.includes("Invalid grant")) {
+                    toast.error("Email service disconnected. Reconnect Gmail in EmailJS.");
+               } else {
+                    toast.error("Something went wrong. Try again!");
+               }
+          }
      };
+
      return (
           <div className="min-h-screen flex flex-col items-center bg-accent text-white justify-center    ">
                {/* navbar */}
-              <div className='w-full '>
-                    <div className={`w-full mb-10 md:mb-5 md:w-[84%] mx-auto py-6 px-5 xl:px-16 flex justify-between items-center`}>
+               <div className='w-full '>
+                    <div className={`w-full mb-10 md:mb-5 md:w-[94%] mx-auto py-6 px-5 xl:px-16 flex justify-between items-center`}>
                          <h1 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600/95 to-base-200 ">
                               Mustafa Tazwer.
                          </h1>

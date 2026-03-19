@@ -6,45 +6,49 @@ import { FaPhoneFlip } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import emailjs from "emailjs-com";
 import toast from "react-hot-toast";
+import { FiMessageSquare, FiSend, FiUser } from "react-icons/fi";
 
 const Contact = () => {
 
      const formRef = useRef();
-     const sendEmail = (e) => {
+
+     const sendEmail = async (e) => {
           e.preventDefault();
 
-          emailjs
-               .sendForm(
+          try {
+               // send to my email
+               await emailjs.sendForm(
                     "service_az99kyt",
-                    "template_3ju77ka",
+                    "template_7xwcmef",
                     formRef.current,
                     "2INs45P1FpExUVDxp"
-               )
-               .then(
-                    () => {
-                         // -------thank you message for user mail
-                         emailjs.send('service_k5w6dvh', 'template_ttgl8lt', {
-                              user_name: formRef.current.user_name.value,
-                              user_email: formRef.current.user_email.value,
-                         }, 'byV8Y8jf7zFVxOFqQ')
-                              .then(() => {
-                                   toast.success('Your Message sent successfully!')
-                              })
-                              .catch((err) => {
-                                   if (err) {
-                                        toast.error("Something went wrong.")
-                                   }
-                              });
-                         // form reset 
-                         formRef.current.reset();
-                    },
-                    (error) => {
-                         if (error) {
-                              toast.error("Failed to send message!");
-                         }
-                    }
                );
+               // send to user
+               await emailjs.send(
+                    "service_az99kyt",
+                    "template_3ju77ka",
+                    {
+                         user_name: formRef.current.user_name.value,
+                         user_email: formRef.current.user_email.value,
+                         user_phone: formRef.current.user_phone.value,
+                         message: formRef.current.message.value,
+                         time: new Date().toLocaleString(),
+                    },
+                    "2INs45P1FpExUVDxp"
+               );
+               toast.success("Your message sent successfully!");
+               formRef.current.reset();
+          } catch (error) {
+               if (error?.text?.includes("Invalid grant")) {
+                    toast.error("Email service disconnected. Reconnect Gmail in EmailJS.");
+               } else {
+                    toast.error("Something went wrong. Try again!");
+               }
+          }
      };
+
+     const inputClass = "w-full rounded-2xl border border-white/10 bg-white/5 pl-11 pr-4 py-3.5 text-sm text-white placeholder:text-slate-500 outline-none transition-all duration-300 focus:border-primary/50 focus:bg-white/10 focus:shadow-[0_0_0_4px_rgba(136,81,224,0.12)]"
+
      return (
           <div className="py-24 px-4 lg:px-24 text-gray-300 ">
                {/* Title */}
@@ -155,78 +159,115 @@ const Contact = () => {
                               </motion.a>
                          </motion.div>
                     </div>
-                    {/* Right Side (Form) */}
-                    <motion.form
-                         ref={formRef}
-                         onSubmit={sendEmail}
+                    {/* Right Side Form */}
+                    <motion.div
                          initial={{ opacity: 0, x: 40 }}
                          whileInView={{ opacity: 1, x: 0 }}
                          transition={{ duration: 0.7 }}
-                         className="bg-base-100 p-4 md:p-8 border border-white/5 rounded-2xl shadow-xl/30 shadow-primary/10 space-y-6"
+                         className="relative"
                     >
-                         <div>
-                              {/* name */}
-                              <label className="text-sm font-semibold">Your Name</label>
-                              <input
-                                   type="text"
-                                   placeholder="Your Name"
-                                   name="user_name"
-                                   required
-                                   className="w-full mt-2 p-3 text-sm md:text-base bg-transparent border border-white/20 rounded-lg focus:border-primary/50 outline-none"
-                              />
+                         <div className="rounded-[30px] border border-white/10 bg-white/5 p-[1px] shadow-[0_20px_80px_rgba(0,0,0,0.35)] backdrop-blur-2xl">
+                              <div className="rounded-[30px] bg-[#0d1322]/60 p-5 md:p-8 xl:p-10">
+                                   <div className="mb-8">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-white">
+                                             Send a Message
+                                        </h3>
+                                        <p className="mt-3 text-sm leading-6 text-slate-400">
+                                             Fill out the form below and I’ll get back to you soon.
+                                        </p>
+                                   </div>
+
+                                   <motion.form
+                                        ref={formRef}
+                                        onSubmit={sendEmail}
+                                        className="space-y-5"
+                                   >
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                             <div>
+                                                  <label className="mb-2 block text-sm font-medium text-slate-200">
+                                                       Your Name
+                                                  </label>
+                                                  <div className="relative">
+                                                       <FiUser className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500" />
+                                                       <input
+                                                            type="text"
+                                                            placeholder="Your name"
+                                                            name="user_name"
+                                                            required
+                                                            className={inputClass}
+                                                       />
+                                                  </div>
+                                             </div>
+                                             {/* phone number  */}
+                                             <div>
+                                                  <label className="mb-2 block text-sm font-medium text-slate-200">
+                                                       Your Email
+                                                  </label>
+                                                  <div className="relative">
+                                                       <MdEmail className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 text-[18px]" />
+                                                       <input
+                                                            type="email"
+                                                            name="user_email"
+                                                            required
+                                                            placeholder="Your email"
+                                                            className={inputClass}
+                                                       />
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        {/* phone number */}
+                                        <div>
+                                             <label className="mb-2 block text-sm font-medium text-slate-200">
+                                                  Phone Number
+                                             </label>
+                                             <div className="relative">
+                                                  <FaPhoneFlip className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 text-[16px]" />
+                                                  <input
+                                                       type="tel"
+                                                       required
+                                                       name="user_phone"
+                                                       placeholder="Your phone number"
+                                                       className={inputClass}
+                                                  />
+                                             </div>
+                                        </div>
+
+                                        <div>
+                                             <label className="mb-2 block text-sm font-medium text-slate-200">
+                                                  Message
+                                             </label>
+                                             <div className="relative">
+                                                  <FiMessageSquare className="absolute left-4 top-4 text-slate-500" />
+                                                  <textarea
+                                                       rows="6"
+                                                       name="message"
+                                                       required
+                                                       placeholder="Write your message..."
+                                                       className={inputClass}
+                                                  ></textarea>
+                                             </div>
+                                        </div>
+
+                                        <input
+                                             type="hidden"
+                                             name="time"
+                                             value={new Date().toLocaleString()}
+                                        />
+
+                                        <motion.button
+                                             type="submit"
+                                             whileHover={{ y: -2, scale: 1.01 }}
+                                             whileTap={{ scale: 0.98 }}
+                                             transition={{ duration: 0.2 }}
+                                             className="group flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-600/95 to-base-200 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-purple-900/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary/20"
+                                        >
+                                             Send Message
+                                             <FiSend className="transition-transform duration-300 group-hover:translate-x-1" />
+                                        </motion.button>
+                                   </motion.form>
+                              </div>
                          </div>
-                         {/* email */}
-                         <div>
-                              <label className="text-sm font-semibold">Your Email</label>
-                              <input
-                                   type="email"
-                                   name="user_email"
-                                   required
-                                   placeholder="Your Email"
-                                   className="w-full mt-2 p-3 text-sm md:text-base bg-transparent border border-white/20 rounded-lg focus:border-primary/50 outline-none"
-                              />
-                         </div>
-                         {/* number */}
-                         <div>
-                              <label className="text-sm font-semibold">Phone Number</label>
-                              <input
-                                   type="number"
-                                   required
-                                   name="user_phone"
-                                   placeholder="Your Phone number"
-                                   className="w-full mt-2 p-3 text-sm md:text-base bg-transparent border border-white/20 rounded-lg focus:border-primary/50 outline-none"
-                              />
-                         </div>
-                         {/* message */}
-                         <div>
-                              <label className="text-sm font-semibold">Message</label>
-                              <textarea
-                                   rows="5"
-                                   name="message"
-                                   placeholder="Write Your Message.."
-                                   className="w-full mt-2 p-3 text-sm md:text-base bg-transparent border border-white/20 rounded-lg focus:border-primary/50 outline-none"
-                              ></textarea>
-                         </div>
-                         {/* Existing fields */}
-                         <input
-                              type="hidden"
-                              name="time"
-                              value={new Date().toLocaleString()}
-                         />
-                         {/* send button */}
-                         <motion.button
-                              type="submit"
-                              whileHover={{
-                                   y: -1,
-                                   scale: 1.03,
-                                   boxShadow: "0 10px 20px rgba(84, 90, 155, 0.35)",
-                                   backgroundColor: "rgb(129,150,248)"
-                              }}
-                              transition={{ duration: .2 }}
-                              className="px-10 py-3 mt-5 shadow-lg shadow-primary/20 hover:shadow-xl mx-auto transition-all duration-300 font-semibold rounded-full bg-gradient-to-r from-purple-600 to-base-200/90 border-none">
-                              Send Message
-                         </motion.button>
-                    </motion.form>
+                    </motion.div>
                </div>
           </div>
      );
