@@ -3,7 +3,9 @@ import { useRef } from 'react';
 import emailjs from "emailjs-com";
 import toast from 'react-hot-toast';
 import { NavLink } from 'react-router-dom';
-import { FiArrowUpRight, FiMail, FiPhoneCall, FiUser } from 'react-icons/fi';
+import { FiArrowUpRight, FiMail, FiPhoneCall, FiUser, FiMessageSquare } from 'react-icons/fi';
+import { MdEmail } from 'react-icons/md';
+import { FaPhoneFlip } from 'react-icons/fa6';
 
 const HireMe = () => {
      const formRef = useRef();
@@ -44,6 +46,8 @@ const HireMe = () => {
                }
           }
      };
+
+     const inputClass = "w-full rounded-2xl border border-white/10 bg-white/5 pl-11 pr-4 py-3.5 text-sm text-white placeholder:text-slate-500 outline-none transition-all duration-300 focus:border-primary/40 focus:bg-white/5 focus:shadow-[0_0_0_4px_rgba(136,81,224,0.12)]"
 
      return (
           <div className="min-h-screen flex flex-col items-center bg-accent text-white justify-center    ">
@@ -115,11 +119,13 @@ const HireMe = () => {
                          transition={{ duration: 0.7 }}
                          className="relative"
                     >
-                         <div className="rounded-[30px] border border-white/10 bg-white/5 shadow-2xl">
-                              <div className="rounded-[24px] border border-white/10 bg-[#11182d]/90 p-4 md:p-8">
-                                   <div className="mb-6">
-                                        <h2 className="text-2xl font-bold md:text-3xl">Hire Me</h2>
-                                        <p className="mt-2 text-sm leading-6 text-slate-400">
+                         <div className="rounded-[30px] border border-white/10 bg-white/5 p-[1px] shadow-[0_20px_80px_rgba(0,0,0,0.35)] backdrop-blur-2xl">
+                              <div className="rounded-[30px] bg-[#0d1322]/60 p-5 md:p-8 xl:p-10">
+                                   <div className="mb-8">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-white">
+                                             Hire Me
+                                        </h3>
+                                        <p className="mt-2.5 text-sm leading-6 text-slate-400">
                                              Fill out the form and share your project, role, or idea.
                                         </p>
                                    </div>
@@ -127,73 +133,89 @@ const HireMe = () => {
                                    <motion.form
                                         ref={formRef}
                                         onSubmit={sendEmail}
-                                        className="space-y-5"
+                                        className="space-y-7"
                                    >
-                                        {/* name */}
-                                        <div>
-                                             <label className="mb-2 block text-sm font-medium text-slate-200">
-                                                  Your Name
-                                             </label>
-                                             <input
-                                                  type="text"
-                                                  placeholder="Enter your name"
-                                                  name="user_name"
-                                                  required
-                                                  className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white placeholder:text-slate-500 outline-none transition duration-300 focus:border-purple-400/50 focus:bg-white/10"
-                                             />
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                             <div>
+                                                  <label className="mb-2 block text-sm font-medium text-slate-200">
+                                                       Your Name
+                                                  </label>
+                                                  <div className="relative">
+                                                       <FiUser className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500" />
+                                                       <input
+                                                            type="text"
+                                                            placeholder="Your name"
+                                                            name="user_name"
+                                                            required
+                                                            className={inputClass}
+                                                       />
+                                                  </div>
+                                             </div>
+                                             {/* phone number  */}
+                                             <div>
+                                                  <label className="mb-2 block text-sm font-medium text-slate-200">
+                                                       Your Email
+                                                  </label>
+                                                  <div className="relative">
+                                                       <MdEmail className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 text-[18px]" />
+                                                       <input
+                                                            type="email"
+                                                            name="user_email"
+                                                            required
+                                                            placeholder="Your email"
+                                                            className={inputClass}
+                                                       />
+                                                  </div>
+                                             </div>
                                         </div>
-
-                                        {/* email */}
-                                        <div>
-                                             <label className="mb-2 block text-sm font-medium text-slate-200">
-                                                  Your Email
-                                             </label>
-                                             <input
-                                                  type="email"
-                                                  name="user_email"
-                                                  required
-                                                  placeholder="Enter your email"
-                                                  className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white placeholder:text-slate-500 outline-none transition duration-300 focus:border-cyan-400/50 focus:bg-white/10"
-                                             />
-                                        </div>
-                                        {/* phone */}
+                                        {/* phone number */}
                                         <div>
                                              <label className="mb-2 block text-sm font-medium text-slate-200">
                                                   Phone Number
                                              </label>
-                                             <input
-                                                  type="text"
-                                                  name="user_phone"
-                                                  required
-                                                  placeholder="Enter your number"
-                                                  className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white placeholder:text-slate-500 outline-none transition duration-300 focus:border-pink-400/50 focus:bg-white/10"
-                                             />
+                                             <div className="relative">
+                                                  <FaPhoneFlip className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 text-[16px]" />
+                                                  <input
+                                                       type="tel"
+                                                       required
+                                                       name="user_phone"
+                                                       placeholder="Your phone number"
+                                                       className={inputClass}
+                                                  />
+                                             </div>
                                         </div>
                                         {/* message */}
                                         <div>
                                              <label className="mb-2 block text-sm font-medium text-slate-200">
                                                   Message
                                              </label>
-                                             <textarea
-                                                  rows="5"
-                                                  name="message"
-                                                  required
-                                                  placeholder="Tell me about your project or opportunity..."
-                                                  className="w-full resize-none rounded-2xl border border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white placeholder:text-slate-500 outline-none transition duration-300 focus:border-purple-400/50 focus:bg-white/10"
-                                             ></textarea>
+                                             <div className="relative">
+                                                  <FiMessageSquare className="absolute left-4 top-4 text-slate-500" />
+                                                  <textarea
+                                                       rows="6"
+                                                       name="message"
+                                                       required
+                                                       placeholder="Write your message..."
+                                                       className={inputClass}
+                                                  ></textarea>
+                                             </div>
                                         </div>
-
-                                        <input type="hidden" name="time" value={new Date().toLocaleString()} />
+                                        {/* time */}
+                                        <input
+                                             type="hidden"
+                                             name="time"
+                                             value={new Date().toLocaleString()}
+                                        />
                                         {/* button */}
                                         <motion.button
                                              type="submit"
-                                             whileHover={{ y: -2, scale: 1.01 }}
+                                             whileHover={{ scale: 1.01 }}
                                              whileTap={{ scale: 0.98 }}
                                              transition={{ duration: 0.2 }}
-                                             className="group cursor-pointer flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-600/90 to-base-200 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-purple-900/30 transition-all duration-300 hover:shadow-lg hover:shadow-base-200/5"
+                                             className="group flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-purple-600/95 to-base-200 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-purple-900/30 transition-all duration-200 hover:shadow-xl hover:shadow-primary/10 cursor-pointer"
                                         >
                                              Send Message
-                                             <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                                             <FiArrowUpRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
                                         </motion.button>
                                    </motion.form>
                               </div>
