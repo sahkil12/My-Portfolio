@@ -54,7 +54,7 @@ const About = () => {
                               <div className="absolute -inset-5 rounded-full bg-gradient-to-r from-purple-600/20 to-primary/20 blur-2xl animate-[pulse_3s_ease-in-out_infinite]"></div>
                               {/* image */}
                               <img
-                                   src="/about1.jpg"
+                                   src="/about-image.jpg"
                                    alt="Mustafa Tazwer About Photo"
                                    loading="lazy"
                                    className="w-56 h-56 md:w-[340px] md:h-[340px] object-cover rounded-full opacity-80 shadow-xl m-2.5 transition-all duration-500"

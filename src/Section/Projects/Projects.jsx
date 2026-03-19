@@ -4,11 +4,20 @@ import { PiGithubLogoBold } from "react-icons/pi";
 
 const projects = [
      {
+          title: "B4 Style",
+          category: "Full Stack Project",
+          description: "A full-stack fashion e-commerce web app featuring product discovery, wishlist, cart, payment integration, and admin management in a modern responsive UI.",
+          tech: ["React", "Node.js", "Express", "MongoDB", "Firebase", "Tailwind CSS", "Framer Motion", "Stripe", "JWT"],
+          image: "/B4 Style.webp",
+          demo: "https://b4-style.vercel.app/",
+          code: "https://github.com/sahkil12/B4-Style-Client"
+     },
+     {
           title: "ProShift",
           category: "Full Stack Project ",
           description: "A parcel delivery platform with tracking, online payments, rider tools, and admin management for users and parcels.",
-          tech: ["React", "Node.js", "MongoDB", "Firebase", "Tailwind CSS", "Express", "Stripe", "TanStack Query"],
-          image: "/proshift.png",
+          tech: ["React", "Node.js", "MongoDB", "Firebase", "Tailwind CSS", "Express", "Stripe", "TanStack Query", "JWT"],
+          image: "/proshift.webp",
           demo: "https://proshift-mover.web.app/",
           code: "https://github.com/sahkil12/ProShift-client"
      },
@@ -16,8 +25,8 @@ const projects = [
           title: "CTG Blood Connect",
           category: "Full Stack Project",
           description: "CTG Blood Connect is a web-based blood donor platform designed to help people in Chittagong quickly find blood donors based on blood group and area.",
-          tech: ["React", "Node.js", "MongoDB", "Tailwind CSS", "TanStack Query", "Firebase"],
-          image: "/ctg-blood-connect.png",
+          tech: ["React", "Node.js", "MongoDB", "Tailwind CSS", "TanStack Query", "Firebase", "JWT"],
+          image: "/ctg-blood-connect.webp",
           demo: "https://ctg-blood-connect.web.app/",
           code: "https://github.com/sahkil12/CTG-Blood-Connect-client"
      },
@@ -25,20 +34,21 @@ const projects = [
           title: "CareerLink",
           category: "Full Stack Project",
           description: "A freelancing marketplace where freelancers can find jobs, clients can post projects, and manage bids with real-time updates.",
-          tech: ["React", "Firebase", "MongoDB", "Node.js", "Express", "Tailwind CSS", "TanStack Query"],
-          image: "/careerlink.png",
+          tech: ["React", "Firebase", "MongoDB", "Node.js", "Express", "Tailwind CSS", "TanStack Query", "JWT"],
+          image: "/careerlink.webp",
           demo: "https://careerlink-project.web.app/",
           code: "https://github.com/sahkil12/CareerLink-project-client"
      },
-     {
-          title: "TaskHive",
-          category: "Full Stack Project",
-          description: "A platform connecting people needing help with small online tasks to those who can complete them, like a mini freelance marketplace.",
-          tech: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Express", "Firebase"],
-          image: "/taskhive.png",
-          demo: "https://taskhive-project-client.web.app/",
-          code: "https://github.com/sahkil12/TaskHive-Project-client"
-     }
+     // {
+     //      title: "TaskHive",
+     //      category: "Full Stack Project",
+     //      description: "A platform connecting people needing help with small online tasks to those who can complete them, like a mini freelance marketplace.",
+     //      tech: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Express", "Firebase"],
+     //      image: "/taskhive.png",
+     //      demo: "https://taskhive-project-client.web.app/",
+     //      code: "https://github.com/sahkil12/TaskHive-Project-client"
+     // },
+
 ];
 
 const Projects = () => {
@@ -98,7 +108,7 @@ const Projects = () => {
                                              <img
                                                   src={project.image}
                                                   alt={project.title}
-                                                  className="w-full h-[160px] sm:h-[300px] xl:h-[380px] object-cover transition duration-500 group-hover:scale-105 group-hover:brightness-80"
+                                                  className="w-full h-[200px] sm:h-[300px] xl:h-[380px] object-cover transition duration-500 group-hover:scale-105 group-hover:brightness-80"
                                              />
                                              {/* Blur Overlay */}
                                              <div className="absolute inset-0 bg-black/40 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-6">

@@ -81,7 +81,7 @@ Mustafa Tazwer
 -----
 
 **Home**
-![Home](./public/home.png)
+![Home](./public/Home1.png)
 
 **About**
 ![About](./public/about.png)
@@ -97,7 +97,7 @@ Mustafa Tazwer
 
 -----
 **Full Page**
-![Portfolio Screenshot](./public/portfolio-full-page.png)
+![Portfolio Screenshot](./public/portfolio-full-ss.png)
 
 **⭐ If you like this project, please give it a star!**
 
