@@ -5,7 +5,7 @@ const Footer = () => {
      const socials = [
           { icon: <FaLinkedin />, label: "LinkedIn", link: "https://www.linkedin.com/in/mustafa-tazwer/" },
           { icon: <FaGithub />, label: "GitHub", link: "https://github.com/sahkil12" },
-          { icon: <FaFacebook />, label: "Facebook", link: "https://www.facebook.com/tazwer.shakil/" },
+          { icon: <FaFacebook />, label: "Facebook", link: "https://www.facebook.com/web.mustafatazwer/" },
           { icon: <FaInstagram  />, label: "Instagram", link: "https://www.instagram.com/mustafatazwer/" },
           { icon: <FaTwitter />, label: "Twitter", link: "https://x.com/MustafaTaz11432" },
      ];
