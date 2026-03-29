@@ -140,7 +140,7 @@ const About = () => {
                                    <p className="text-gray-300 font-semibold text-base mb-1.5">
                                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">MERN Stack</span> Developer
                                    </p>
-                                   <p className="text-gray-400 text-sm"><b>Fresher</b> | 2025 - Present</p>
+                                   <p className="text-gray-400 font-semibold">6 Month + Experience </p>
 
                               </motion.div>
                               {/* technical skills */}
